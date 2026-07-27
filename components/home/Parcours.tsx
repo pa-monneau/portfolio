@@ -131,18 +131,18 @@ const Parcours = () => (
     id="parcours"
     className="w-full [padding:var(--portfolio-section-space)_var(--portfolio-page-padding)]"
   >
-    <motion.div {...reveal()}>
+    <motion.div {...reveal()} className="text-center">
       <p className="mb-4 font-mono text-xs tracking-[0.2em] text-brand-primary uppercase">
         Parcours
       </p>
-      <h2 className="max-w-[45rem] [font-family:var(--portfolio-font-display)] text-[clamp(1.75rem,3.6vw,2.75rem)] leading-tight font-semibold tracking-tight text-fg-primary">
+      <h2 className="mx-auto max-w-[45rem] [font-family:var(--portfolio-font-display)] text-[clamp(1.75rem,3.6vw,2.75rem)] leading-tight font-semibold tracking-tight text-fg-primary">
         De la mission au produit qui tourne
       </h2>
     </motion.div>
 
     <motion.div
       {...reveal(0.1)}
-      className="mt-8 mb-24 flex flex-wrap items-center gap-6"
+      className="mt-8 mb-24 flex flex-wrap items-center justify-center gap-6 text-center"
     >
       <p className="max-w-[37.5rem] text-[clamp(1rem,1.6vw,1.1875rem)] leading-relaxed text-fg-secondary">
         7 ans d&apos;expérience full stack et tech lead, développeur web et
@@ -153,19 +153,19 @@ const Parcours = () => (
       </Badge>
     </motion.div>
 
-    <div className="relative ml-6 flex flex-col border-l border-line-subtle pl-8 sm:ml-10 sm:pl-10">
+    <div className="relative mx-auto flex w-fit flex-col border-l border-line-subtle pl-8 sm:pl-10">
       {experiences.map((exp, i) => (
         <motion.div
           key={exp.company}
           {...reveal(i < 4 ? i * 0.08 : 0)}
-          className="relative flex flex-col gap-2 pb-12 last:pb-0"
+          className="relative flex flex-col items-center gap-2 pb-12 text-center last:pb-0"
         >
           <span
             aria-hidden
             className="absolute top-1.5 -left-[2.28rem] size-2.5 rounded-full bg-brand-primary sm:-left-[2.78rem]"
           />
           <div className="max-w-[40rem]">
-            <div className="flex flex-wrap items-baseline gap-x-4 gap-y-1">
+            <div className="flex flex-wrap items-baseline justify-center gap-x-4 gap-y-1">
               <span className="font-mono text-[13px] text-fg-tertiary">
                 {exp.period}
               </span>
@@ -177,7 +177,7 @@ const Parcours = () => (
             <p className="mt-2 text-[15.5px] leading-relaxed text-fg-secondary">
               {exp.context}
             </p>
-            <div className="mt-2 flex flex-wrap gap-1.5">
+            <div className="mt-2 flex flex-wrap justify-center gap-1.5">
               {exp.stack.map((tech) => (
                 <Badge
                   key={tech}

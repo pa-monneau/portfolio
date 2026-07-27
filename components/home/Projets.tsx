@@ -110,11 +110,11 @@ const Projets = () => (
     className="w-full bg-surface-elevated [padding:6rem_var(--portfolio-page-padding)_var(--portfolio-section-space)]"
   >
     <div className="w-full">
-      <motion.div {...reveal()} className="mb-24">
+      <motion.div {...reveal()} className="mb-24 text-center">
         <p className="mb-4 font-mono text-xs tracking-[0.2em] text-brand-primary uppercase">
           Projets persos
         </p>
-        <h2 className="max-w-[45rem] [font-family:var(--portfolio-font-display)] text-[clamp(1.75rem,3.6vw,2.75rem)] leading-tight font-semibold tracking-tight text-fg-primary">
+        <h2 className="mx-auto max-w-[45rem] [font-family:var(--portfolio-font-display)] text-[clamp(1.75rem,3.6vw,2.75rem)] leading-tight font-semibold tracking-tight text-fg-primary">
           Des side projects qui tournent en prod
         </h2>
       </motion.div>
@@ -142,8 +142,8 @@ const Projets = () => (
               />
             </a>
 
-            <div>
-              <div className="mb-3 flex items-baseline gap-4">
+            <div className="flex flex-col items-center text-center">
+              <div className="mb-3 flex items-baseline justify-center gap-4">
                 <span className="font-mono text-[13px] text-fg-tertiary">
                   {project.index}
                 </span>
@@ -165,9 +165,9 @@ const Projets = () => (
                 {project.pitch}
               </p>
 
-              <ul className="mb-6 flex flex-col gap-2 text-[14.5px] text-fg-secondary">
+              <ul className="mb-6 flex flex-col items-center gap-2 text-[14.5px] text-fg-secondary">
                 {project.facts.map((fact) => (
-                  <li key={fact} className="flex gap-3">
+                  <li key={fact} className="flex justify-center gap-3">
                     <CheckIcon
                       aria-hidden
                       className="mt-0.5 size-3.5 shrink-0 text-brand-primary"
@@ -177,7 +177,7 @@ const Projets = () => (
                 ))}
               </ul>
 
-              <div className="mb-8 flex flex-wrap gap-2">
+              <div className="mb-8 flex flex-wrap justify-center gap-2">
                 {project.stack.map((tech) => (
                   <Badge key={tech} tone="neutral" className="font-mono">
                     {tech}

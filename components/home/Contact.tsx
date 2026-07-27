@@ -38,19 +38,22 @@ const Contact = () => (
     id="contact"
     className="w-full [padding:var(--portfolio-section-space)_var(--portfolio-page-padding)]"
   >
-    <motion.div {...reveal()}>
+    <motion.div {...reveal()} className="text-center">
       <p className="mb-4 font-mono text-xs tracking-[0.2em] text-brand-primary uppercase">
         Contact
       </p>
-      <h2 className="max-w-[42.5rem] [font-family:var(--portfolio-font-display)] text-[clamp(1.75rem,4.2vw,3.25rem)] leading-tight font-semibold tracking-tight text-fg-primary">
+      <h2 className="mx-auto max-w-[42.5rem] [font-family:var(--portfolio-font-display)] text-[clamp(1.75rem,4.2vw,3.25rem)] leading-tight font-semibold tracking-tight text-fg-primary">
         Discutons de votre prochain projet
       </h2>
-      <p className="mt-4 max-w-xl text-fg-secondary">
+      <p className="mx-auto mt-4 max-w-xl text-fg-secondary">
         Disponible pour des missions freelance et des postes de lead technique.
       </p>
     </motion.div>
 
-    <motion.div {...reveal(0.1)} className="mt-16 flex flex-wrap gap-6">
+    <motion.div
+      {...reveal(0.1)}
+      className="mt-16 flex flex-wrap justify-center gap-6"
+    >
       {contactLinks.map(({ label, value, href, icon: Icon }) => (
         <a
           key={label}
@@ -68,7 +71,7 @@ const Contact = () => (
       ))}
     </motion.div>
 
-    <motion.div {...reveal(0.18)} className="mt-8">
+    <motion.div {...reveal(0.18)} className="mt-8 text-center">
       <LinkButton
         href="/CV-Pierre-Alexandre-Monneau.pdf"
         variant="secondary"
@@ -78,7 +81,7 @@ const Contact = () => (
       </LinkButton>
     </motion.div>
 
-    <div className="mt-16 flex flex-wrap items-center justify-between gap-3 border-t border-line-subtle pt-8 font-mono text-xs text-fg-tertiary">
+    <div className="mt-16 flex flex-wrap items-center justify-center gap-3 border-t border-line-subtle pt-8 font-mono text-xs text-fg-tertiary">
       <p>© {new Date().getFullYear()} Pierre-Alexandre Monneau</p>
       <a href="#top" className="transition-colors hover:text-fg-primary">
         Haut de page
