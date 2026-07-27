@@ -25,7 +25,7 @@ const experiences: Experience[] = [
     company: "Record'air (projet personnel)",
     period: "Avril 2026 – Aujourd'hui",
     context:
-      'Marketplace de réservation de studios de musique façon Airbnb — conception et développement de bout en bout, en autonomie complète.',
+      'Marketplace de réservation de studios à trois acteurs, conçue et développée de bout en bout en autonomie : parcours de réservation, back-office studio, messagerie temps réel et infrastructure GCP. Paiement Stripe intégré jusqu’à la capture, aux webhooks et aux commissions marketplace.',
     stack: ['Next.js', 'Supabase', 'Stripe', 'GCP'],
   },
   {
@@ -33,7 +33,7 @@ const experiences: Experience[] = [
     company: "Home'air (projet personnel)",
     period: "Juin 2026 – Aujourd'hui",
     context:
-      'Marketplace française de services à domicile, compte unique client/prestataire, migration progressive du back-end vers Go.',
+      'Marketplace de services à domicile pensée autour de deux parcours, client et prestataire, avec un compte à double rôle et des réservations directes ou par candidatures. Architecture Next.js et Supabase auto-hébergé sur GCP, avec une cible API Go pour faire évoluer progressivement le back-end.',
     stack: ['Next.js', 'Go', 'Supabase', 'GCP'],
   },
   {
@@ -41,7 +41,7 @@ const experiences: Experience[] = [
     company: 'Ankama, France',
     period: 'Octobre 2025 – Mai 2026',
     context:
-      "Team lead d'une équipe de 12 personnes sur Ankama Launcher : pilotage technique, outils internes, diffusion de bonnes pratiques.",
+      'Team lead de 12 personnes sur Ankama Launcher : pilotage technique des sprints, migrations inter-équipes et accompagnement des développeurs. Mise en place d’une API NestJS en clean architecture et d’environnements personnels déployables à la demande via GitLab CI.',
     stack: ['NestJS', 'Vue.js', 'Quasar', 'GitLab CI'],
   },
   {
@@ -49,7 +49,7 @@ const experiences: Experience[] = [
     company: 'ABS French Preschool',
     period: 'Fév. – Juin 2024 · Déc. 2024 – Avr. 2025',
     context:
-      "Plateforme CMS sur mesure pour une chaîne d'écoles américaines, du cadrage à la supervision GCP, en autonomie complète.",
+      'Réalisation hors design d’une plateforme CMS pour une chaîne d’écoles américaines, du cadrage fonctionnel à la supervision GCP. Front Next.js, back headless Strapi et API Go d’adaptation pour normaliser puis exposer les données de plusieurs sources externes.',
     stack: ['Next.js', 'Go', 'Strapi', 'GCP'],
   },
   {
@@ -57,7 +57,7 @@ const experiences: Experience[] = [
     company: 'Waykonect (filiale TotalEnergies)',
     period: 'Mai 2024 – Novembre 2024',
     context:
-      "Refonte de la solution Waykonect, back-office réalisé en autonomie au sein d'une équipe de 6.",
+      'Refonte de la solution au sein d’une équipe de 6, avec réalisation du back-office Next.js en autonomie et évolution du produit React. Reprise d’un projet sans documentation, réintégration à l’infrastructure AWS et création d’environnements de test déployables via pipeline.',
     stack: ['Next.js', 'React', 'GraphQL', 'AWS'],
   },
   {
@@ -65,7 +65,7 @@ const experiences: Experience[] = [
     company: 'Illicado',
     period: 'Juillet 2023 – Octobre 2023',
     context:
-      "API Wallet en NestJS (cycle de vie d'une carte cadeau) et refonte du back-office en Vue 3 / Nuxt.",
+      'Conception de l’API Wallet NestJS couvrant le cycle de vie d’une carte cadeau dans une architecture microservices. Développement d’API CRUD hexagonales, refonte du back-office en Vue 3 / Nuxt et mise en place de la CI/CD GitLab.',
     stack: ['NestJS', 'Vue 3', 'Microservices'],
   },
   {
@@ -73,7 +73,7 @@ const experiences: Experience[] = [
     company: 'Lyreco',
     period: 'Décembre 2022 – Juin 2023',
     context:
-      "Référent front sur un site e-commerce B2B : migration TypeScript et formation de l'équipe.",
+      'Référent front d’une équipe Scrum de 10 personnes sur le site e-commerce B2B : migration TypeScript, refactorisation du legacy et optimisation des performances. Mise en place de Jest, du linter et de Prettier, puis formation de trois développeurs aux bonnes pratiques TS/JS.',
     stack: ['Vue.js', 'TypeScript', 'Jest'],
   },
   {
@@ -81,7 +81,7 @@ const experiences: Experience[] = [
     company: 'Client e-commerce',
     period: 'Juin 2022 – Août 2022',
     context:
-      'Sites e-commerce en autonomie complète, Next.js en SSR/BFF et architecture hexagonale.',
+      'Développement en autonomie de sites e-commerce avec Next.js en SSR/BFF et une architecture hexagonale documentée. Intégration de NextAuth, microservices et chaîne CI/CD GitLab avec provisioning Ansible.',
     stack: ['Next.js', 'React', 'NextAuth'],
   },
   {
@@ -89,7 +89,7 @@ const experiences: Experience[] = [
     company: 'ADEO (Leroy Merlin, Brico Dépôt)',
     period: 'Novembre 2021 – Avril 2022',
     context:
-      'POC du projet ERPC : refonte back-end hexagonale et queues inter-microservices KafkaJS.',
+      'Réalisation du POC ERPC au sein d’une équipe de 4 : refonte de services back-end en architecture hexagonale et développement de fonctionnalités NestJS. Mise en place de KafkaJS pour les échanges inter-microservices, avec documentation et tests automatisés.',
     stack: ['NestJS', 'KafkaJS', 'MongoDB'],
   },
   {
@@ -97,7 +97,7 @@ const experiences: Experience[] = [
     company: 'SNCF e-voyageur',
     period: 'Mars 2021 – Septembre 2021',
     context:
-      'Intégration et maintenance du front React de la plateforme digitale voyageurs SNCF.',
+      'Intégration et maintenance du front React de la plateforme digitale voyageurs SNCF. Développement de fonctionnalités avec Redux, intégration de templates Drupal et rédaction de la documentation de refactorisation.',
     stack: ['React', 'Redux', 'Drupal'],
   },
   {
@@ -105,7 +105,7 @@ const experiences: Experience[] = [
     company: 'Phi Développement',
     period: 'Novembre 2019 – Mars 2021',
     context:
-      'Projets en autonomie pour une agence, dont une app React Native avec paiement Stripe intégré.',
+      'Réalisation en autonomie de projets web et mobile pour une agence : microservices Express, dashboards d’administration et authentification Passport.js. Développement d’une application React Native avec géolocalisation, génération de PDF et paiement Stripe.',
     stack: ['React Native', 'Express.js', 'Stripe'],
   },
   {
@@ -113,7 +113,7 @@ const experiences: Experience[] = [
     company: 'Clicar',
     period: 'Janvier 2018 – Novembre 2019',
     context:
-      'Développement du site clicar.com (front React, API Express.js) en petite équipe.',
+      'Développement du site clicar.com au sein d’une équipe de deux développeurs et un designer : front React et API Express.js. Réalisation de l’authentification, du dashboard d’administration et du déploiement Docker, avec contribution à la formation et aux contenus de cours.',
     stack: ['React', 'Express.js', 'Docker'],
   },
   {
@@ -121,7 +121,7 @@ const experiences: Experience[] = [
     company: 'Info Logi Santé (Qualineo)',
     period: 'Novembre 2017 – Janvier 2018',
     context:
-      "Refonte front-end d'une application métier pour le secteur de la santé.",
+      'Refonte et intégration du front d’une application métier pour le secteur de la santé. Correction de bugs, intégration UI et refactorisation progressive de code legacy en ASP.NET.',
     stack: ['JavaScript', 'ASP.NET'],
   },
 ];
@@ -166,13 +166,13 @@ const Parcours = () => (
           />
           <div className="max-w-[40rem] xl:max-w-[60rem]">
             <div className="flex flex-col gap-1">
-              <span className="font-mono text-[13px] text-fg-tertiary">
-                {exp.period}
-              </span>
               <h3 className="[font-family:var(--portfolio-font-display)] text-xl font-semibold text-fg-primary">
                 {exp.role}{' '}
                 <span className="text-fg-secondary">— {exp.company}</span>
               </h3>
+              <span className="font-mono text-[13px] text-fg-tertiary">
+                {exp.period}
+              </span>
             </div>
             <p className="mt-2 text-[15.5px] leading-relaxed text-fg-secondary">
               {exp.context}
