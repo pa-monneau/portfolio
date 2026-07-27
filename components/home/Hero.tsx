@@ -11,10 +11,9 @@ import { getTechBadgeClassName, sortTechnologies } from '@/lib/techBadge';
 
 const stack = ['Next.js', 'React', 'React Native', 'PostgreSQL'];
 
-// Intensité et facteurs de vitesse repris du design validé (outer -0.12, inner -0.22,
-// intensité par défaut 0.5) : deux cercles qui dérivent à des vitesses différentes au
-// scroll, sans les lignes verticales du design d'origine (retirées, non désirées).
-const PARALLAX_INTENSITY = 0.5;
+// La grille et les cercles défilent à des vitesses distinctes pour créer de la profondeur
+// sans déplacer le contenu de lecture.
+const PARALLAX_INTENSITY = 1;
 
 const container = {
   hidden: {},
@@ -37,18 +36,22 @@ const Hero = () => {
   const { scrollY } = useScroll();
 
   const outerY = useTransform(scrollY, (y) =>
-    prefersReducedMotion ? 0 : y * -0.12 * PARALLAX_INTENSITY,
+    prefersReducedMotion ? 0 : y * -0.14 * PARALLAX_INTENSITY,
   );
   const innerY = useTransform(scrollY, (y) =>
-    prefersReducedMotion ? 0 : y * -0.22 * PARALLAX_INTENSITY,
+    prefersReducedMotion ? 0 : y * -0.28 * PARALLAX_INTENSITY,
+  );
+  const gridY = useTransform(scrollY, (y) =>
+    prefersReducedMotion ? 0 : y * 0.08 * PARALLAX_INTENSITY,
   );
 
   return (
     <section className="relative flex min-h-screen flex-col justify-center overflow-hidden [padding:calc(6rem+4rem)_var(--portfolio-page-padding)_6rem]">
-      <div
+      <motion.div
         aria-hidden
         className="pointer-events-none absolute inset-0 hidden opacity-60 sm:block"
         style={{
+          y: gridY,
           backgroundImage:
             'repeating-linear-gradient(90deg, var(--color-line-subtle) 0, var(--color-line-subtle) 1px, transparent 1px, transparent clamp(5rem, 10vw, 10rem))',
         }}
