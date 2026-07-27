@@ -5,6 +5,7 @@ import {
   motion,
   useReducedMotion,
   useScroll,
+  useSpring,
   useTransform,
 } from 'motion/react';
 import { getTechBadgeClassName, sortTechnologies } from '@/lib/techBadge';
@@ -56,15 +57,17 @@ const Hero = () => {
   const squareX = useTransform(scrollY, (y) =>
     prefersReducedMotion ? 0 : y * 0.36 * PARALLAX_INTENSITY,
   );
-  const accentY = useTransform(scrollY, (y) =>
+  const accentYTarget = useTransform(scrollY, (y) =>
     prefersReducedMotion
       ? 0
-      : y * 0.68 * PARALLAX_INTENSITY +
-        (1 - Math.cos(y * 0.014)) * 40 * PARALLAX_INTENSITY,
+      : y * 0.64 * PARALLAX_INTENSITY +
+        (1 - Math.cos(y * 0.008)) * 36 * PARALLAX_INTENSITY,
   );
-  const accentX = useTransform(scrollY, (y) =>
-    prefersReducedMotion ? 0 : Math.sin(y * 0.014) * 90 * PARALLAX_INTENSITY,
+  const accentXTarget = useTransform(scrollY, (y) =>
+    prefersReducedMotion ? 0 : Math.sin(y * 0.008) * 50 * PARALLAX_INTENSITY,
   );
+  const accentY = useSpring(accentYTarget, { stiffness: 90, damping: 24 });
+  const accentX = useSpring(accentXTarget, { stiffness: 90, damping: 24 });
 
   return (
     <section className="relative flex min-h-screen flex-col justify-center overflow-hidden [padding:calc(6rem+4rem)_var(--portfolio-page-padding)_6rem]">
@@ -79,7 +82,7 @@ const Hero = () => {
       />
       <div
         aria-hidden
-        className="pointer-events-none absolute top-[58%] -right-12 block origin-top-right scale-75 sm:top-[28%] sm:right-[clamp(3rem,8vw,12rem)] sm:scale-100"
+        className="pointer-events-none absolute top-[28%] right-[clamp(3rem,8vw,12rem)] hidden origin-top-right sm:block"
       >
         <motion.div
           style={{ y: outerY }}
