@@ -7,6 +7,7 @@ import {
   useScroll,
   useTransform,
 } from 'motion/react';
+import { getTechBadgeClassName, sortTechnologies } from '@/lib/techBadge';
 
 const stack = ['Next.js', 'React', 'React Native', 'PostgreSQL'];
 
@@ -97,8 +98,12 @@ const Hero = () => {
         </motion.p>
 
         <motion.div variants={item} className="mt-12 flex flex-wrap gap-3">
-          {stack.map((tech) => (
-            <Badge key={tech} tone="neutral" className="font-mono">
+          {sortTechnologies(stack).map((tech) => (
+            <Badge
+              key={tech}
+              tone="neutral"
+              className={getTechBadgeClassName(tech)}
+            >
               {tech}
             </Badge>
           ))}

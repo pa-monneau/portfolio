@@ -1,0 +1,92 @@
+const technologyOrder: Record<string, number> = {
+  TypeScript: 10,
+  JavaScript: 20,
+  Go: 30,
+  React: 100,
+  'React Native': 110,
+  'Next.js': 120,
+  'Next.js 16': 120,
+  'Vue.js': 130,
+  'Vue 3': 130,
+  Nuxt: 140,
+  NestJS: 150,
+  'Express.js': 160,
+  Quasar: 170,
+  Redux: 180,
+  'Tailwind CSS': 190,
+  PostgreSQL: 200,
+  Supabase: 210,
+  'Supabase Realtime': 210,
+  'Supabase self-hosted': 210,
+  MongoDB: 220,
+  Strapi: 230,
+  GraphQL: 300,
+  KafkaJS: 310,
+  NextAuth: 320,
+  Stripe: 330,
+  GCP: 400,
+  'Cloud Run': 400,
+  AWS: 410,
+  Docker: 420,
+  'GitLab CI': 430,
+  Jest: 440,
+  Storybook: 450,
+  Vite: 450,
+  Vitest: 440,
+  npm: 460,
+  Drupal: 470,
+  'ASP.NET': 480,
+};
+
+const techBadgeClassNames: Record<string, string> = {
+  'ASP.NET': 'portfolio-tech-dotnet',
+  AWS: 'portfolio-tech-aws',
+  'Cloud Run': 'portfolio-tech-gcp',
+  Docker: 'portfolio-tech-docker',
+  Drupal: 'portfolio-tech-drupal',
+  'Express.js': 'portfolio-tech-express',
+  GCP: 'portfolio-tech-gcp',
+  Go: 'portfolio-tech-go',
+  GraphQL: 'portfolio-tech-graphql',
+  JavaScript: 'portfolio-tech-javascript',
+  Jest: 'portfolio-tech-jest',
+  KafkaJS: 'portfolio-tech-kafka',
+  MongoDB: 'portfolio-tech-mongodb',
+  NestJS: 'portfolio-tech-nest',
+  NextAuth: 'portfolio-tech-nextjs',
+  'Next.js': 'portfolio-tech-nextjs',
+  'Next.js 16': 'portfolio-tech-nextjs',
+  'Node.js': 'portfolio-tech-node',
+  npm: 'portfolio-tech-npm',
+  Nuxt: 'portfolio-tech-nuxt',
+  PostgreSQL: 'portfolio-tech-postgresql',
+  Quasar: 'portfolio-tech-quasar',
+  React: 'portfolio-tech-react',
+  'React Native': 'portfolio-tech-react',
+  Redux: 'portfolio-tech-redux',
+  Storybook: 'portfolio-tech-storybook',
+  Strapi: 'portfolio-tech-strapi',
+  Stripe: 'portfolio-tech-stripe',
+  Supabase: 'portfolio-tech-supabase',
+  'Supabase Realtime': 'portfolio-tech-supabase',
+  'Supabase self-hosted': 'portfolio-tech-supabase',
+  TypeScript: 'portfolio-tech-typescript',
+  'Tailwind CSS': 'portfolio-tech-tailwind',
+  Vite: 'portfolio-tech-vite',
+  Vitest: 'portfolio-tech-vitest',
+  'Vue 3': 'portfolio-tech-vue',
+  'Vue.js': 'portfolio-tech-vue',
+};
+
+const getTechBadgeClassName = (tech: string): string =>
+  `font-mono portfolio-tech-badge ${techBadgeClassNames[tech] ?? 'portfolio-tech-default'}`;
+
+const sortTechnologies = (technologies: string[]): string[] =>
+  [...technologies].sort(
+    (first, second) =>
+      (technologyOrder[first] ?? Number.MAX_SAFE_INTEGER) -
+        (technologyOrder[second] ?? Number.MAX_SAFE_INTEGER) ||
+      first.localeCompare(second),
+  );
+
+export { getTechBadgeClassName, sortTechnologies };

@@ -3,6 +3,7 @@
 import { Badge } from '@recordair/ui-core';
 import { UserIcon } from '@recordair/ui-core/icons';
 import { motion } from 'motion/react';
+import { getTechBadgeClassName, sortTechnologies } from '@/lib/techBadge';
 
 const reveal = (delay = 0) => ({
   initial: { opacity: 0, y: 20 },
@@ -61,6 +62,7 @@ const experiences: Experience[] = [
       'Team lead de 12 personnes sur Ankama Launcher : pilotage technique des sprints, migrations inter-équipes et accompagnement des développeurs. Mise en place d’une API NestJS en clean architecture et d’environnements personnels déployables à la demande via GitLab CI.',
     stack: [
       'TypeScript',
+      'Go',
       'Node.js',
       'NestJS',
       'Vue.js',
@@ -83,7 +85,7 @@ const experiences: Experience[] = [
     period: 'Mai 2024 – Novembre 2024',
     context:
       'Refonte de la solution au sein d’une équipe de 6, avec réalisation du back-office Next.js en autonomie et évolution du produit React. Reprise d’un projet sans documentation, réintégration à l’infrastructure AWS et création d’environnements de test déployables via pipeline.',
-    stack: ['Next.js', 'React', 'TypeScript', 'GraphQL', 'AWS', 'Jest'],
+    stack: ['Next.js', 'React', 'TypeScript', 'Go', 'GraphQL', 'AWS', 'Jest'],
   },
   {
     role: 'Développeur Back-end / Front-end',
@@ -218,12 +220,12 @@ const Parcours = () => (
               {exp.context}
             </p>
             <div className="mt-2 flex flex-wrap gap-1.5">
-              {exp.stack.map((tech) => (
+              {sortTechnologies(exp.stack).map((tech) => (
                 <Badge
                   key={tech}
                   tone="neutral"
                   size="xs"
-                  className="font-mono"
+                  className={getTechBadgeClassName(tech)}
                 >
                   {tech}
                 </Badge>

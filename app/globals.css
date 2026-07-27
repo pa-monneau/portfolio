@@ -17,6 +17,37 @@
   --portfolio-section-space: 8rem;
   --portfolio-font-display: 'Space Grotesk', sans-serif;
   --portfolio-font-body: 'Public Sans', sans-serif;
+  --portfolio-tech-aws: #ff9900;
+  --portfolio-tech-default: #64748b;
+  --portfolio-tech-docker: #2496ed;
+  --portfolio-tech-dotnet: #512bd4;
+  --portfolio-tech-drupal: #0678be;
+  --portfolio-tech-express: #171717;
+  --portfolio-tech-gcp: #4285f4;
+  --portfolio-tech-go: #00add8;
+  --portfolio-tech-graphql: #e10098;
+  --portfolio-tech-javascript: #f7df1e;
+  --portfolio-tech-jest: #c21325;
+  --portfolio-tech-kafka: #231f20;
+  --portfolio-tech-mongodb: #47a248;
+  --portfolio-tech-nest: #e0234e;
+  --portfolio-tech-nextjs: #171717;
+  --portfolio-tech-node: #5fa04e;
+  --portfolio-tech-npm: #cb3837;
+  --portfolio-tech-nuxt: #00dc82;
+  --portfolio-tech-postgresql: #4169e1;
+  --portfolio-tech-quasar: #1976d2;
+  --portfolio-tech-react: #61dafb;
+  --portfolio-tech-redux: #764abc;
+  --portfolio-tech-storybook: #ff4785;
+  --portfolio-tech-strapi: #4945ff;
+  --portfolio-tech-stripe: #635bff;
+  --portfolio-tech-supabase: #3ecf8e;
+  --portfolio-tech-tailwind: #06b6d4;
+  --portfolio-tech-typescript: #3178c6;
+  --portfolio-tech-vite: #646cff;
+  --portfolio-tech-vitest: #6e9f18;
+  --portfolio-tech-vue: #42b883;
   --font-mono: 'IBM Plex Mono', monospace;
 }
 
@@ -35,3 +66,42 @@
 body {
   font-family: var(--portfolio-font-body);
 }
+
+.portfolio-tech-badge {
+  --portfolio-tech-color: var(--portfolio-tech-default);
+  border: 1px solid color-mix(in srgb, var(--portfolio-tech-color) 38%, transparent);
+  background-color: color-mix(in srgb, var(--portfolio-tech-color) 13%, transparent);
+  color: color-mix(in srgb, var(--portfolio-tech-color) 72%, var(--color-fg-primary));
+}
+
+.portfolio-tech-aws { --portfolio-tech-color: var(--portfolio-tech-aws); }
+.portfolio-tech-default { --portfolio-tech-color: var(--portfolio-tech-default); }
+.portfolio-tech-docker { --portfolio-tech-color: var(--portfolio-tech-docker); }
+.portfolio-tech-dotnet { --portfolio-tech-color: var(--portfolio-tech-dotnet); }
+.portfolio-tech-drupal { --portfolio-tech-color: var(--portfolio-tech-drupal); }
+.portfolio-tech-express { --portfolio-tech-color: var(--portfolio-tech-express); }
+.portfolio-tech-gcp { --portfolio-tech-color: var(--portfolio-tech-gcp); }
+.portfolio-tech-go { --portfolio-tech-color: var(--portfolio-tech-go); }
+.portfolio-tech-graphql { --portfolio-tech-color: var(--portfolio-tech-graphql); }
+.portfolio-tech-javascript { --portfolio-tech-color: var(--portfolio-tech-javascript); }
+.portfolio-tech-jest { --portfolio-tech-color: var(--portfolio-tech-jest); }
+.portfolio-tech-kafka { --portfolio-tech-color: var(--portfolio-tech-kafka); }
+.portfolio-tech-mongodb { --portfolio-tech-color: var(--portfolio-tech-mongodb); }
+.portfolio-tech-nest { --portfolio-tech-color: var(--portfolio-tech-nest); }
+.portfolio-tech-nextjs { --portfolio-tech-color: var(--portfolio-tech-nextjs); }
+.portfolio-tech-node { --portfolio-tech-color: var(--portfolio-tech-node); }
+.portfolio-tech-npm { --portfolio-tech-color: var(--portfolio-tech-npm); }
+.portfolio-tech-nuxt { --portfolio-tech-color: var(--portfolio-tech-nuxt); }
+.portfolio-tech-postgresql { --portfolio-tech-color: var(--portfolio-tech-postgresql); }
+.portfolio-tech-quasar { --portfolio-tech-color: var(--portfolio-tech-quasar); }
+.portfolio-tech-react { --portfolio-tech-color: var(--portfolio-tech-react); }
+.portfolio-tech-redux { --portfolio-tech-color: var(--portfolio-tech-redux); }
+.portfolio-tech-storybook { --portfolio-tech-color: var(--portfolio-tech-storybook); }
+.portfolio-tech-strapi { --portfolio-tech-color: var(--portfolio-tech-strapi); }
+.portfolio-tech-stripe { --portfolio-tech-color: var(--portfolio-tech-stripe); }
+.portfolio-tech-supabase { --portfolio-tech-color: var(--portfolio-tech-supabase); }
+.portfolio-tech-tailwind { --portfolio-tech-color: var(--portfolio-tech-tailwind); }
+.portfolio-tech-typescript { --portfolio-tech-color: var(--portfolio-tech-typescript); }
+.portfolio-tech-vite { --portfolio-tech-color: var(--portfolio-tech-vite); }
+.portfolio-tech-vitest { --portfolio-tech-color: var(--portfolio-tech-vitest); }
+.portfolio-tech-vue { --portfolio-tech-color: var(--portfolio-tech-vue); }

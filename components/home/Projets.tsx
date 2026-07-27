@@ -9,6 +9,7 @@ import {
 import { motion } from 'motion/react';
 import Image from 'next/image';
 import { publicAssetPath } from '@/lib/publicAssetPath';
+import { getTechBadgeClassName, sortTechnologies } from '@/lib/techBadge';
 
 const reveal = (delay = 0) => ({
   initial: { opacity: 0, y: 24 },
@@ -26,7 +27,6 @@ type Project = {
   pitch: string;
   facts: string[];
   stack: string[];
-  stackPending?: string[];
   image: string;
   href: string;
   note: string;
@@ -45,7 +45,7 @@ const projects: Project[] = [
       '3 packages npm publiés et versionnés',
       'Storybook déployé avec documentation générée depuis les stories',
     ],
-    stack: ['React', 'TypeScript', 'Storybook', 'npm'],
+    stack: ['React', 'TypeScript', 'Vite', 'Storybook', 'Tailwind CSS', 'npm'],
     image: '/images/projects/designair.png',
     href: 'https://pa-monneau.github.io/designair/?path=/docs/introduction-overview--docs',
     note: 'Socle UI commun des projets de l’écosystème Air.',
@@ -62,7 +62,16 @@ const projects: Project[] = [
       '3 profils : artiste, studio, professionnel',
       'Paiement Stripe — autorisation → capture',
     ],
-    stack: ['Next.js 16', 'Supabase self-hosted', 'GCP'],
+    stack: [
+      'Next.js 16',
+      'React',
+      'TypeScript',
+      'NestJS',
+      'Supabase self-hosted',
+      'PostgreSQL',
+      'Stripe',
+      'GCP',
+    ],
     image: '/images/projects/recordair.png',
     href: 'https://recordair.com',
     note: "Projet le plus abouti — de l'idée au produit qui tourne en prod.",
@@ -79,8 +88,15 @@ const projects: Project[] = [
       'Compte unique client / prestataire',
       "Paiement verrouillé à l'acceptation du devis + réputation",
     ],
-    stack: ['Cloud Run'],
-    stackPending: ['Stack à préciser'],
+    stack: [
+      'Next.js',
+      'React',
+      'TypeScript',
+      'Supabase',
+      'Stripe',
+      'GCP',
+      'Cloud Run',
+    ],
     image: '/images/projects/homeair.png',
     href: 'https://homeair-577545104657.europe-west9.run.app/',
     note: 'En ligne, en finition avant une prod stabilisée.',
@@ -97,8 +113,15 @@ const projects: Project[] = [
       '4 jeux : pioche de cartes, pendu, dés, mime',
       'Local (pass-and-play) & distant temps réel (Supabase Realtime)',
     ],
-    stack: ['Supabase Realtime'],
-    stackPending: ['Stack à préciser'],
+    stack: [
+      'Next.js',
+      'React',
+      'TypeScript',
+      'Supabase Realtime',
+      'GCP',
+      'Cloud Run',
+      'Vitest',
+    ],
     image: '/images/projects/biair.png',
     href: 'https://biair-538206392035.europe-west9.run.app/',
     note: 'Architecture pensée dès le départ pour les modes local et distant.',
@@ -179,16 +202,11 @@ const Projets = () => (
               </ul>
 
               <div className="mb-8 flex flex-wrap justify-center gap-2">
-                {project.stack.map((tech) => (
-                  <Badge key={tech} tone="neutral" className="font-mono">
-                    {tech}
-                  </Badge>
-                ))}
-                {project.stackPending?.map((tech) => (
+                {sortTechnologies(project.stack).map((tech) => (
                   <Badge
                     key={tech}
                     tone="neutral"
-                    className="border border-dashed border-line font-mono"
+                    className={getTechBadgeClassName(tech)}
                   >
                     {tech}
                   </Badge>
