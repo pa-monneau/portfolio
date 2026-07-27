@@ -100,7 +100,7 @@ const Hero = () => {
       <motion.div
         aria-hidden
         style={{ x: accentX, y: accentY }}
-        className="pointer-events-none absolute top-24 left-[clamp(10rem,18vw,24rem)] hidden size-[clamp(1.5rem,2.5vw,2.5rem)] rotate-45 bg-brand-primary opacity-30 sm:block"
+        className="pointer-events-none absolute top-24 left-[clamp(10rem,18vw,24rem)] hidden size-[clamp(1.5rem,2.5vw,2.5rem)] rotate-45 border-2 border-brand-primary/70 bg-brand-primary/10 sm:block"
       />
 
       <motion.div
