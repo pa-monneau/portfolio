@@ -36,20 +36,26 @@ const Hero = () => {
   const { scrollY } = useScroll();
 
   const outerY = useTransform(scrollY, (y) =>
-    prefersReducedMotion ? 0 : y * -0.14 * PARALLAX_INTENSITY,
-  );
-  const innerY = useTransform(scrollY, (y) =>
     prefersReducedMotion ? 0 : y * -0.28 * PARALLAX_INTENSITY,
   );
+  const innerY = useTransform(scrollY, (y) =>
+    prefersReducedMotion ? 0 : y * -0.52 * PARALLAX_INTENSITY,
+  );
   const gridY = useTransform(scrollY, (y) =>
-    prefersReducedMotion ? 0 : y * 0.08 * PARALLAX_INTENSITY,
+    prefersReducedMotion ? 0 : y * 0.16 * PARALLAX_INTENSITY,
+  );
+  const diamondY = useTransform(scrollY, (y) =>
+    prefersReducedMotion ? 0 : y * 0.34 * PARALLAX_INTENSITY,
+  );
+  const squareY = useTransform(scrollY, (y) =>
+    prefersReducedMotion ? 0 : y * -0.4 * PARALLAX_INTENSITY,
   );
 
   return (
     <section className="relative flex min-h-screen flex-col justify-center overflow-hidden [padding:calc(6rem+4rem)_var(--portfolio-page-padding)_6rem]">
       <motion.div
         aria-hidden
-        className="pointer-events-none absolute inset-0 hidden opacity-60 sm:block"
+        className="pointer-events-none absolute inset-0 hidden opacity-80 sm:block"
         style={{
           y: gridY,
           backgroundImage:
@@ -62,13 +68,28 @@ const Hero = () => {
       >
         <motion.div
           style={{ y: outerY }}
-          className="size-[clamp(17.5rem,32vw,32.5rem)] rounded-full border-2 border-brand-primary/15"
+          className="size-[clamp(17.5rem,32vw,32.5rem)] rounded-full border-2 border-brand-primary/30"
         />
         <motion.div
           style={{ y: innerY }}
-          className="absolute top-[clamp(3.5rem,8vw,7.5rem)] right-[clamp(2.5rem,4vw,8.75rem)] size-[clamp(8.75rem,16vw,15rem)] rounded-full border-2 border-brand-primary/40"
+          className="absolute top-[clamp(3.5rem,8vw,7.5rem)] right-[clamp(2.5rem,4vw,8.75rem)] size-[clamp(8.75rem,16vw,15rem)] rounded-full border-2 border-brand-primary/70 bg-brand-primary/10"
         />
       </div>
+      <motion.div
+        aria-hidden
+        style={{ y: diamondY }}
+        className="pointer-events-none absolute top-[18%] right-[clamp(18rem,24vw,32rem)] hidden size-[clamp(4rem,7vw,8rem)] rotate-45 border-2 border-brand-primary/70 bg-brand-primary/20 sm:block"
+      />
+      <motion.div
+        aria-hidden
+        style={{ y: squareY }}
+        className="pointer-events-none absolute right-[clamp(6rem,11vw,15rem)] bottom-[12%] hidden size-[clamp(3rem,5vw,5.5rem)] border-2 border-brand-primary/80 bg-surface-page sm:block"
+      />
+      <motion.div
+        aria-hidden
+        style={{ y: diamondY }}
+        className="pointer-events-none absolute bottom-[22%] left-[clamp(2rem,9vw,12rem)] hidden size-[clamp(1.5rem,2.5vw,2.5rem)] rotate-45 bg-brand-primary sm:block"
+      />
 
       <motion.div
         variants={prefersReducedMotion ? undefined : container}
