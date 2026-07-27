@@ -45,10 +45,22 @@ const Hero = () => {
     prefersReducedMotion ? 0 : y * 0.16 * PARALLAX_INTENSITY,
   );
   const diamondY = useTransform(scrollY, (y) =>
-    prefersReducedMotion ? 0 : y * 0.34 * PARALLAX_INTENSITY,
+    prefersReducedMotion ? 0 : y * 0.56 * PARALLAX_INTENSITY,
+  );
+  const diamondX = useTransform(scrollY, (y) =>
+    prefersReducedMotion ? 0 : y * -0.32 * PARALLAX_INTENSITY,
   );
   const squareY = useTransform(scrollY, (y) =>
-    prefersReducedMotion ? 0 : y * -0.4 * PARALLAX_INTENSITY,
+    prefersReducedMotion ? 0 : y * -0.62 * PARALLAX_INTENSITY,
+  );
+  const squareX = useTransform(scrollY, (y) =>
+    prefersReducedMotion ? 0 : y * 0.36 * PARALLAX_INTENSITY,
+  );
+  const accentY = useTransform(scrollY, (y) =>
+    prefersReducedMotion ? 0 : y * 0.44 * PARALLAX_INTENSITY,
+  );
+  const accentX = useTransform(scrollY, (y) =>
+    prefersReducedMotion ? 0 : y * 0.52 * PARALLAX_INTENSITY,
   );
 
   return (
@@ -77,17 +89,17 @@ const Hero = () => {
       </div>
       <motion.div
         aria-hidden
-        style={{ y: diamondY }}
+        style={{ x: diamondX, y: diamondY }}
         className="pointer-events-none absolute top-[18%] right-[clamp(18rem,24vw,32rem)] hidden size-[clamp(4rem,7vw,8rem)] rotate-45 border-2 border-brand-primary/70 bg-brand-primary/20 sm:block"
       />
       <motion.div
         aria-hidden
-        style={{ y: squareY }}
+        style={{ x: squareX, y: squareY }}
         className="pointer-events-none absolute right-[clamp(6rem,11vw,15rem)] bottom-[12%] hidden size-[clamp(3rem,5vw,5.5rem)] border-2 border-brand-primary/80 bg-surface-page sm:block"
       />
       <motion.div
         aria-hidden
-        style={{ y: diamondY }}
+        style={{ x: accentX, y: accentY }}
         className="pointer-events-none absolute bottom-[22%] left-[clamp(2rem,9vw,12rem)] hidden size-[clamp(1.5rem,2.5vw,2.5rem)] rotate-45 bg-brand-primary sm:block"
       />
 
