@@ -76,7 +76,7 @@ const Hero = () => {
       />
       <div
         aria-hidden
-        className="pointer-events-none absolute top-[18%] right-[clamp(3rem,8vw,12rem)] hidden sm:block"
+        className="pointer-events-none absolute top-[28%] right-[clamp(3rem,8vw,12rem)] hidden sm:block"
       >
         <motion.div
           style={{ y: outerY }}
@@ -90,17 +90,17 @@ const Hero = () => {
       <motion.div
         aria-hidden
         style={{ x: diamondX, y: diamondY }}
-        className="pointer-events-none absolute top-[36%] right-[clamp(12rem,19vw,24rem)] hidden size-[clamp(4rem,7vw,8rem)] rotate-45 border-2 border-brand-primary/70 bg-brand-primary/20 sm:block"
+        className="pointer-events-none absolute top-[52%] right-[clamp(12rem,19vw,24rem)] hidden size-[clamp(4rem,7vw,8rem)] rotate-45 border-2 border-brand-primary/70 bg-brand-primary/20 sm:block"
       />
       <motion.div
         aria-hidden
         style={{ x: squareX, y: squareY }}
-        className="pointer-events-none absolute right-[clamp(10rem,16vw,22rem)] bottom-[4%] hidden size-[clamp(3rem,5vw,5.5rem)] border-2 border-brand-primary/80 bg-surface-page sm:block"
+        className="pointer-events-none absolute right-[clamp(10rem,16vw,22rem)] -bottom-[6%] hidden size-[clamp(3rem,5vw,5.5rem)] border-2 border-brand-primary/80 bg-surface-page sm:block"
       />
       <motion.div
         aria-hidden
         style={{ x: accentX, y: accentY }}
-        className="pointer-events-none absolute bottom-[10%] left-[clamp(10rem,18vw,24rem)] hidden size-[clamp(1.5rem,2.5vw,2.5rem)] rotate-45 bg-brand-primary sm:block"
+        className="pointer-events-none absolute bottom-0 left-[clamp(10rem,18vw,24rem)] hidden size-[clamp(1.5rem,2.5vw,2.5rem)] rotate-45 bg-brand-primary sm:block"
       />
 
       <motion.div
