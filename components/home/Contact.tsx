@@ -81,7 +81,7 @@ const Contact = () => (
       </LinkButton>
     </motion.div>
 
-    <div className="mt-16 flex flex-wrap items-center justify-center gap-3 border-t border-line-subtle pt-8 font-mono text-xs text-fg-tertiary">
+    <div className="mt-16 flex flex-wrap items-center justify-between gap-3 border-t border-line-subtle pt-8 font-mono text-xs text-fg-tertiary">
       <p>© {new Date().getFullYear()} Pierre-Alexandre Monneau</p>
       <a href="#top" className="transition-colors hover:text-fg-primary">
         Haut de page
