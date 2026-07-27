@@ -31,6 +31,21 @@ type Project = {
 const projects: Project[] = [
   {
     index: '01',
+    name: "Design'air",
+    status: 'live',
+    statusLabel: 'Publié',
+    statusSub: 'lib UI partagée',
+    pitch:
+      "Design system React partagé entre Record'air, Home'air et Bi'air, conçu pour accélérer chaque produit sans diluer leur identité.",
+    facts: [
+      '3 packages npm publiés et versionnés',
+      'Storybook déployé avec documentation générée depuis les stories',
+    ],
+    stack: ['React', 'TypeScript', 'Storybook', 'npm'],
+    note: 'Socle UI commun des projets de l’écosystème Air.',
+  },
+  {
+    index: '02',
     name: "Record'air",
     status: 'live',
     statusLabel: 'En production',
@@ -45,7 +60,7 @@ const projects: Project[] = [
     note: "Projet le plus abouti — de l'idée au produit qui tourne en prod.",
   },
   {
-    index: '02',
+    index: '03',
     name: "Home'air",
     status: 'progress',
     statusLabel: 'En finition',
@@ -61,7 +76,7 @@ const projects: Project[] = [
     note: 'En ligne, en finition avant une prod stabilisée.',
   },
   {
-    index: '03',
+    index: '04',
     name: "Bi'air",
     status: 'live',
     statusLabel: 'En ligne',

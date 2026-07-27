@@ -10,8 +10,8 @@ export default function Home() {
       <SiteHeader />
       <div id="top" />
       <Hero />
-      <Parcours />
       <Projets />
+      <Parcours />
       <Contact />
     </>
   );

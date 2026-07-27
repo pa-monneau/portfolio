@@ -11,7 +11,7 @@
 
 - Composition : header fixe, hero pleine hauteur avec grille verticale et anneaux, sections centrées sur 1280 px, bande Projets en pleine largeur.
 - Typographie : Space Grotesk pour les titres, Public Sans pour le corps et IBM Plex Mono pour les micro-libellés, comme dans l'export source.
-- Sections : timeline du parcours, projets en grille 5/7 avec cadres d'aperçu, statuts, faits, tags et lien, puis contact.
+- Sections : projets en grille 5/7 avec cadres d'aperçu, statuts, faits, tags et lien, puis timeline du parcours et contact. L'ordre Projets → Parcours est une évolution explicite post-maquette.
 - Interactions : navigation par ancres, CTAs et liens de contact conservés ; animations respectueuses de `prefers-reduced-motion`.
 
 ## Findings
