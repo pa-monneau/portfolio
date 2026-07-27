@@ -59,6 +59,7 @@ const projects: Project[] = [
       'Paiement Stripe — autorisation → capture',
     ],
     stack: ['Next.js 16', 'Supabase self-hosted', 'GCP'],
+    href: 'https://recordair.com',
     note: "Projet le plus abouti — de l'idée au produit qui tourne en prod.",
   },
   {
@@ -75,6 +76,7 @@ const projects: Project[] = [
     ],
     stack: ['Cloud Run'],
     stackPending: ['Stack à préciser'],
+    href: 'https://homeair-577545104657.europe-west9.run.app/',
     note: 'En ligne, en finition avant une prod stabilisée.',
   },
   {
@@ -91,6 +93,7 @@ const projects: Project[] = [
     ],
     stack: ['Supabase Realtime'],
     stackPending: ['Stack à préciser'],
+    href: 'https://biair-538206392035.europe-west9.run.app/',
     note: 'Architecture pensée dès le départ pour les modes local et distant.',
   },
 ];
