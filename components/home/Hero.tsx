@@ -67,7 +67,7 @@ const Hero = () => {
     <section className="relative flex min-h-screen flex-col justify-center overflow-hidden [padding:calc(6rem+4rem)_var(--portfolio-page-padding)_6rem]">
       <motion.div
         aria-hidden
-        className="pointer-events-none absolute inset-0 hidden opacity-80 sm:block"
+        className="pointer-events-none absolute inset-0 block opacity-40 sm:opacity-80"
         style={{
           y: gridY,
           backgroundImage:
@@ -76,7 +76,7 @@ const Hero = () => {
       />
       <div
         aria-hidden
-        className="pointer-events-none absolute top-[28%] right-[clamp(3rem,8vw,12rem)] hidden sm:block"
+        className="pointer-events-none absolute top-[28%] right-[clamp(3rem,8vw,12rem)] block origin-top-right scale-75 sm:scale-100"
       >
         <motion.div
           style={{ y: outerY }}
@@ -95,12 +95,12 @@ const Hero = () => {
       <motion.div
         aria-hidden
         style={{ x: squareX, y: squareY }}
-        className="pointer-events-none absolute right-[clamp(10rem,16vw,22rem)] -bottom-[6%] hidden size-[clamp(3rem,5vw,5.5rem)] border-2 border-brand-primary/80 bg-surface-page sm:block"
+        className="pointer-events-none absolute right-[clamp(10rem,16vw,22rem)] -bottom-[6%] block size-[clamp(3rem,5vw,5.5rem)] border-2 border-brand-primary/80 bg-surface-page"
       />
       <motion.div
         aria-hidden
         style={{ x: accentX, y: accentY }}
-        className="pointer-events-none absolute top-24 left-[clamp(10rem,18vw,24rem)] hidden size-[clamp(1.5rem,2.5vw,2.5rem)] rotate-45 border-2 border-brand-primary/70 bg-brand-primary/10 sm:block"
+        className="pointer-events-none absolute top-24 left-[clamp(10rem,18vw,24rem)] block size-[clamp(1.5rem,2.5vw,2.5rem)] rotate-45 border-2 border-brand-primary/70 bg-brand-primary/10"
       />
 
       <motion.div
