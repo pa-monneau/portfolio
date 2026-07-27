@@ -76,7 +76,7 @@ const Hero = () => {
       />
       <div
         aria-hidden
-        className="pointer-events-none absolute top-[28%] right-[clamp(3rem,8vw,12rem)] block origin-top-right scale-75 sm:scale-100"
+        className="pointer-events-none absolute top-[58%] -right-12 block origin-top-right scale-75 sm:top-[28%] sm:right-[clamp(3rem,8vw,12rem)] sm:scale-100"
       >
         <motion.div
           style={{ y: outerY }}
@@ -100,7 +100,7 @@ const Hero = () => {
       <motion.div
         aria-hidden
         style={{ x: accentX, y: accentY }}
-        className="pointer-events-none absolute top-24 left-[clamp(10rem,18vw,24rem)] block size-[clamp(1.5rem,2.5vw,2.5rem)] rotate-45 border-2 border-brand-primary/70 bg-brand-primary/10"
+        className="pointer-events-none absolute top-[65%] left-[72%] block size-[clamp(1.5rem,2.5vw,2.5rem)] rotate-45 border-2 border-brand-primary/70 bg-brand-primary/10 sm:top-24 sm:left-[clamp(10rem,18vw,24rem)]"
       />
 
       <motion.div
