@@ -57,10 +57,10 @@ const Hero = () => {
     prefersReducedMotion ? 0 : y * 0.36 * PARALLAX_INTENSITY,
   );
   const accentY = useTransform(scrollY, (y) =>
-    prefersReducedMotion ? 0 : y * 0.44 * PARALLAX_INTENSITY,
+    prefersReducedMotion ? 0 : y * 0.8 * PARALLAX_INTENSITY,
   );
   const accentX = useTransform(scrollY, (y) =>
-    prefersReducedMotion ? 0 : y * 0.52 * PARALLAX_INTENSITY,
+    prefersReducedMotion ? 0 : y * 0.9 * PARALLAX_INTENSITY,
   );
 
   return (
