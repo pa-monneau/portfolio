@@ -8,6 +8,7 @@ import {
 } from '@recordair/ui-core/icons';
 import { motion } from 'motion/react';
 import Image from 'next/image';
+import { publicAssetPath } from '@/lib/publicAssetPath';
 
 const reveal = (delay = 0) => ({
   initial: { opacity: 0, y: 24 },
@@ -134,7 +135,7 @@ const Projets = () => (
               className="relative aspect-4/3 overflow-hidden rounded-[var(--radius-lg)] border border-line-subtle bg-surface-page transition-transform duration-500 hover:-translate-y-1 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-primary"
             >
               <Image
-                src={project.image}
+                src={publicAssetPath(project.image)}
                 alt={`Aperçu de ${project.name}`}
                 fill
                 sizes="(min-width: 1024px) 42vw, 100vw"

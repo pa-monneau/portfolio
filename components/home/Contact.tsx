@@ -3,6 +3,7 @@
 import { LinkButton } from '@recordair/ui-core';
 import { MailIcon } from '@recordair/ui-core/icons';
 import { motion } from 'motion/react';
+import { publicAssetPath } from '@/lib/publicAssetPath';
 import { GithubIcon, LinkedinIcon } from './icons';
 
 const reveal = (delay = 0) => ({
@@ -73,7 +74,7 @@ const Contact = () => (
 
     <motion.div {...reveal(0.18)} className="mt-8 text-center">
       <LinkButton
-        href="/CV-Pierre-Alexandre-Monneau.pdf"
+        href={publicAssetPath('/CV-Pierre-Alexandre-Monneau.pdf')}
         variant="secondary"
         download
       >
