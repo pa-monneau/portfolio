@@ -1,7 +1,11 @@
 'use client';
 
-import { Badge, Card, CardContent } from '@recordair/ui-core';
-import { CheckIcon, WrenchIcon } from '@recordair/ui-core/icons';
+import { Badge } from '@recordair/ui-core';
+import {
+  ArrowRightIcon,
+  CheckIcon,
+  WrenchIcon,
+} from '@recordair/ui-core/icons';
 import { motion } from 'motion/react';
 
 const reveal = (delay = 0) => ({
@@ -75,89 +79,90 @@ const projects: Project[] = [
 ];
 
 const Projets = () => (
-  <section id="projets" className="mx-auto max-w-4xl px-6 py-24 sm:px-12">
-    <motion.div {...reveal()}>
-      <p className="mb-4 font-mono text-xs tracking-[0.2em] text-brand-primary uppercase">
-        Projets persos
-      </p>
-      <h2 className="max-w-xl text-3xl font-bold tracking-tight text-fg-primary sm:text-4xl">
-        Des side projects qui tournent en prod
-      </h2>
-    </motion.div>
+  <section
+    id="projets"
+    className="w-full bg-surface-elevated [padding:6rem_var(--portfolio-page-padding)_var(--portfolio-section-space)]"
+  >
+    <div className="mx-auto max-w-[var(--portfolio-content-width)]">
+      <motion.div {...reveal()} className="mb-24">
+        <p className="mb-4 font-mono text-xs tracking-[0.2em] text-brand-primary uppercase">
+          Projets persos
+        </p>
+        <h2 className="max-w-[45rem] [font-family:var(--portfolio-font-display)] text-[clamp(1.75rem,3.6vw,2.75rem)] leading-tight font-semibold tracking-tight text-fg-primary">
+          Des side projects qui tournent en prod
+        </h2>
+      </motion.div>
 
-    <div className="mt-12 flex flex-col gap-6">
-      {projects.map((project, i) => (
-        <motion.div key={project.name} {...reveal(0.1 + i * 0.08)}>
-          <Card variant="elevated">
-            <CardContent className="flex flex-col gap-4 sm:flex-row sm:gap-8">
-              <span className="font-mono text-sm text-fg-tertiary">
-                {project.index}
-              </span>
+      <div>
+        {projects.map((project, i) => (
+          <motion.article
+            key={project.name}
+            {...reveal(0.1 + i * 0.08)}
+            className="grid grid-cols-1 items-center gap-8 border-t border-line-subtle py-16 lg:grid-cols-[5fr_7fr] lg:gap-16"
+          >
+            <div className="aspect-4/3 overflow-hidden rounded-[var(--radius-lg)] border border-line-subtle bg-surface-page transition-transform duration-500 hover:-translate-y-1">
+              <div aria-hidden className="size-full" />
+            </div>
 
-              <div className="flex-1">
-                <div className="flex flex-wrap items-center gap-3">
-                  <h3 className="text-xl font-bold text-fg-primary">
-                    {project.name}
-                  </h3>
-                  <Badge
-                    tone={project.status === 'live' ? 'success' : 'warning'}
-                    icon={
-                      project.status === 'live' ? (
-                        <CheckIcon className="size-3.5" />
-                      ) : (
-                        <WrenchIcon className="size-3.5" />
-                      )
-                    }
-                  >
-                    {project.statusLabel}
-                  </Badge>
-                  <span className="text-xs text-fg-tertiary">
-                    {project.statusSub}
-                  </span>
-                </div>
-
-                <p className="mt-3 text-fg-secondary">{project.pitch}</p>
-
-                <ul className="mt-3 flex flex-col gap-1 text-sm text-fg-secondary">
-                  {project.facts.map((fact) => (
-                    <li key={fact} className="flex gap-2">
-                      <span aria-hidden className="text-brand-primary">
-                        —
-                      </span>
-                      {fact}
-                    </li>
-                  ))}
-                </ul>
-
-                <div className="mt-4 flex flex-wrap gap-2">
-                  {project.stack.map((tech) => (
-                    <Badge key={tech} tone="neutral" className="font-mono">
-                      {tech}
-                    </Badge>
-                  ))}
-                  {project.stackPending?.map((tech) => (
-                    <Badge
-                      key={tech}
-                      tone="neutral"
-                      className="font-mono italic opacity-60"
-                    >
-                      {tech}
-                    </Badge>
-                  ))}
-                </div>
-
-                <p className="mt-4 text-sm text-fg-tertiary italic">
-                  {project.note}
-                </p>
-
-                <p className="mt-3 font-mono text-xs tracking-[0.1em] text-fg-tertiary uppercase">
-                  Lien à venir
-                </p>
+            <div>
+              <div className="mb-3 flex items-baseline gap-4">
+                <span className="font-mono text-[13px] text-fg-tertiary">
+                  {project.index}
+                </span>
+                <h3 className="[font-family:var(--portfolio-font-display)] text-[clamp(1.5rem,2.6vw,2rem)] font-semibold tracking-tight text-fg-primary">
+                  {project.name}
+                </h3>
               </div>
-            </CardContent>
-          </Card>
-        </motion.div>
-      ))}
+              <div className="mb-6 inline-flex flex-wrap items-center gap-2 rounded-full bg-brand-primary/10 px-4 py-1 font-mono text-[12.5px] text-brand-secondary">
+                {project.status === 'live' ? (
+                  <CheckIcon className="size-3.5" />
+                ) : (
+                  <WrenchIcon className="size-3.5" />
+                )}
+                <span>{project.statusLabel}</span>
+                <span className="text-fg-tertiary">— {project.statusSub}</span>
+              </div>
+
+              <p className="mb-6 max-w-[35rem] text-[16.5px] leading-relaxed text-fg-secondary">
+                {project.pitch}
+              </p>
+
+              <ul className="mb-6 flex flex-col gap-2 text-[14.5px] text-fg-secondary">
+                {project.facts.map((fact) => (
+                  <li key={fact} className="flex gap-3">
+                    <CheckIcon
+                      aria-hidden
+                      className="mt-0.5 size-3.5 shrink-0 text-brand-primary"
+                    />
+                    {fact}
+                  </li>
+                ))}
+              </ul>
+
+              <div className="mb-8 flex flex-wrap gap-2">
+                {project.stack.map((tech) => (
+                  <Badge key={tech} tone="neutral" className="font-mono">
+                    {tech}
+                  </Badge>
+                ))}
+                {project.stackPending?.map((tech) => (
+                  <Badge
+                    key={tech}
+                    tone="neutral"
+                    className="border border-dashed border-line font-mono"
+                  >
+                    {tech}
+                  </Badge>
+                ))}
+              </div>
+
+              <span className="inline-flex items-center gap-2 border-b border-dashed border-line pb-0.5 text-sm font-semibold text-fg-primary">
+                Voir le projet <ArrowRightIcon className="size-3.5" />
+              </span>
+            </div>
+          </motion.article>
+        ))}
+      </div>
     </div>
   </section>
 );

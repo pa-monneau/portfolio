@@ -43,18 +43,26 @@ const Hero = () => {
   );
 
   return (
-    <section className="relative flex min-h-[calc(100vh-65px)] flex-col justify-center overflow-hidden px-6 py-24 sm:px-12">
+    <section className="relative flex min-h-screen flex-col justify-center overflow-hidden [padding:calc(6rem+4rem)_var(--portfolio-page-padding)_6rem]">
       <div
         aria-hidden
-        className="pointer-events-none absolute -top-10 -right-24 hidden sm:block"
+        className="pointer-events-none absolute inset-0 hidden opacity-60 sm:block"
+        style={{
+          backgroundImage:
+            'repeating-linear-gradient(90deg, var(--color-line-subtle) 0, var(--color-line-subtle) 1px, transparent 1px, transparent clamp(5rem, 10vw, 10rem))',
+        }}
+      />
+      <div
+        aria-hidden
+        className="pointer-events-none absolute top-[8%] -right-10 hidden sm:block"
       >
         <motion.div
           style={{ y: outerY }}
-          className="size-[420px] rounded-full border border-brand-primary/20"
+          className="size-[clamp(17.5rem,32vw,32.5rem)] rounded-full border-2 border-brand-primary/15"
         />
         <motion.div
           style={{ y: innerY }}
-          className="absolute top-24 right-24 size-[220px] rounded-full border border-brand-primary/40"
+          className="absolute top-[clamp(3.5rem,8vw,7.5rem)] right-[clamp(2.5rem,4vw,8.75rem)] size-[clamp(8.75rem,16vw,15rem)] rounded-full border-2 border-brand-primary/40"
         />
       </div>
 
@@ -62,28 +70,33 @@ const Hero = () => {
         variants={prefersReducedMotion ? undefined : container}
         initial={prefersReducedMotion ? undefined : 'hidden'}
         animate={prefersReducedMotion ? undefined : 'show'}
-        className="relative max-w-2xl"
+        className="relative max-w-[70rem]"
       >
         <motion.p
           variants={item}
-          className="mb-4 font-mono text-xs tracking-[0.2em] text-brand-primary uppercase"
+          className="mb-6 font-mono text-[13px] tracking-[0.08em] text-brand-primary uppercase"
         >
           Développeur freelance — Lead technique
         </motion.p>
 
         <motion.h1
           variants={item}
-          className="text-5xl font-bold tracking-tight text-fg-primary sm:text-6xl"
+          className="[font-family:var(--portfolio-font-display)] text-[clamp(2.5rem,6.4vw,6rem)] leading-[0.98] font-semibold tracking-[-0.02em] text-fg-primary"
         >
-          Pierre-Alexandre Monneau
+          Pierre-Alexandre
+          <br />
+          Monneau
         </motion.h1>
 
-        <motion.p variants={item} className="mt-6 text-lg text-fg-secondary">
+        <motion.p
+          variants={item}
+          className="mt-8 max-w-[40rem] text-[clamp(1.125rem,2vw,1.5rem)] leading-relaxed text-fg-secondary"
+        >
           Lead développeur freelance JS/TS, je conçois et je construis des
           produits du code au business.
         </motion.p>
 
-        <motion.div variants={item} className="mt-6 flex flex-wrap gap-2">
+        <motion.div variants={item} className="mt-12 flex flex-wrap gap-3">
           {stack.map((tech) => (
             <Badge key={tech} tone="neutral" className="font-mono">
               {tech}
@@ -91,7 +104,7 @@ const Hero = () => {
           ))}
         </motion.div>
 
-        <motion.div variants={item} className="mt-10 flex flex-wrap gap-3">
+        <motion.div variants={item} className="mt-16 flex flex-wrap gap-4">
           <LinkButton href="#projets" variant="primary">
             Voir les projets
           </LinkButton>
@@ -105,7 +118,7 @@ const Hero = () => {
         variants={prefersReducedMotion ? undefined : item}
         initial={prefersReducedMotion ? undefined : 'hidden'}
         animate={prefersReducedMotion ? undefined : 'show'}
-        className="absolute bottom-10 left-6 flex items-center gap-3 sm:left-12"
+        className="absolute bottom-12 left-[var(--portfolio-page-padding)] flex items-center gap-3"
       >
         <span aria-hidden className="h-8 w-px bg-line" />
         <span className="font-mono text-xs tracking-[0.2em] text-fg-tertiary uppercase">

@@ -1,6 +1,7 @@
 'use client';
 
 import { Badge } from '@recordair/ui-core';
+import { UserIcon } from '@recordair/ui-core/icons';
 import { motion } from 'motion/react';
 
 const reveal = (delay = 0) => ({
@@ -126,45 +127,56 @@ const experiences: Experience[] = [
 ];
 
 const Parcours = () => (
-  <section id="parcours" className="mx-auto max-w-4xl px-6 py-24 sm:px-12">
+  <section
+    id="parcours"
+    className="mx-auto w-full max-w-[var(--portfolio-content-width)] [padding:var(--portfolio-section-space)_var(--portfolio-page-padding)]"
+  >
     <motion.div {...reveal()}>
       <p className="mb-4 font-mono text-xs tracking-[0.2em] text-brand-primary uppercase">
         Parcours
       </p>
-      <h2 className="max-w-xl text-3xl font-bold tracking-tight text-fg-primary sm:text-4xl">
+      <h2 className="max-w-[45rem] [font-family:var(--portfolio-font-display)] text-[clamp(1.75rem,3.6vw,2.75rem)] leading-tight font-semibold tracking-tight text-fg-primary">
         De la mission au produit qui tourne
       </h2>
     </motion.div>
 
     <motion.div
       {...reveal(0.1)}
-      className="mt-6 flex flex-wrap items-center gap-4"
+      className="mt-8 mb-24 flex flex-wrap items-center gap-6"
     >
-      <p className="max-w-xl text-fg-secondary">
+      <p className="max-w-[37.5rem] text-[clamp(1rem,1.6vw,1.1875rem)] leading-relaxed text-fg-secondary">
         7 ans d&apos;expérience full stack et tech lead, développeur web et
         mobile freelance basé à Lille.
       </p>
-      <Badge tone="brand" size="md">
+      <Badge tone="brand" size="md" icon={<UserIcon className="size-3.5" />}>
         Team lead — jusqu&apos;à 12 personnes
       </Badge>
     </motion.div>
 
-    <div className="mt-12 flex flex-col divide-y divide-line-subtle">
+    <div className="relative ml-6 flex flex-col border-l border-line-subtle pl-8 sm:ml-10 sm:pl-10">
       {experiences.map((exp, i) => (
         <motion.div
           key={exp.company}
           {...reveal(i < 4 ? i * 0.08 : 0)}
-          className="flex flex-col gap-2 py-6 first:pt-0 sm:flex-row sm:items-start sm:justify-between sm:gap-6"
+          className="relative flex flex-col gap-2 pb-12 last:pb-0"
         >
-          <div className="sm:max-w-2xl">
-            <div className="flex flex-wrap items-baseline gap-x-2">
-              <h3 className="font-semibold text-fg-primary">{exp.role}</h3>
-              <span aria-hidden className="text-fg-tertiary">
-                —
+          <span
+            aria-hidden
+            className="absolute top-1.5 -left-[2.28rem] size-2.5 rounded-full bg-brand-primary sm:-left-[2.78rem]"
+          />
+          <div className="max-w-[40rem]">
+            <div className="flex flex-wrap items-baseline gap-x-4 gap-y-1">
+              <span className="font-mono text-[13px] text-fg-tertiary">
+                {exp.period}
               </span>
-              <span className="text-fg-secondary">{exp.company}</span>
+              <h3 className="[font-family:var(--portfolio-font-display)] text-xl font-semibold text-fg-primary">
+                {exp.role}
+              </h3>
+              <span className="text-sm text-fg-secondary">— {exp.company}</span>
             </div>
-            <p className="mt-1 text-sm text-fg-secondary">{exp.context}</p>
+            <p className="mt-2 text-[15.5px] leading-relaxed text-fg-secondary">
+              {exp.context}
+            </p>
             <div className="mt-2 flex flex-wrap gap-1.5">
               {exp.stack.map((tech) => (
                 <Badge
@@ -178,9 +190,6 @@ const Parcours = () => (
               ))}
             </div>
           </div>
-          <span className="shrink-0 font-mono text-xs text-fg-tertiary sm:pt-1 sm:text-right">
-            {exp.period}
-          </span>
         </motion.div>
       ))}
     </div>

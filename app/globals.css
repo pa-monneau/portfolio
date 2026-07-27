@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Public+Sans:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap');
 @import "tailwindcss";
 @import "@recordair/theme-recordair";
 
@@ -12,6 +13,12 @@
   --recordair-color-brand-gradient-from: #2563eb;
   --recordair-color-brand-gradient-to: #1e3a8a;
   --recordair-color-selected-fg: #2563eb;
+  --portfolio-content-width: 80rem;
+  --portfolio-page-padding: clamp(1.25rem, 5vw, 4rem);
+  --portfolio-section-space: 8rem;
+  --portfolio-font-display: 'Space Grotesk', sans-serif;
+  --portfolio-font-body: 'Public Sans', sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
 }
 
 [data-theme="dark"] {
@@ -20,4 +27,12 @@
   --recordair-color-brand-gradient-from: #3b82f6;
   --recordair-color-brand-gradient-to: #1e3a8a;
   --recordair-color-selected-fg: #60a5fa;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--recordair-color-brand-primary) 14%, transparent);
+}
+
+body {
+  font-family: var(--portfolio-font-body);
 }

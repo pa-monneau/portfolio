@@ -34,12 +34,15 @@ const contactLinks = [
 ];
 
 const Contact = () => (
-  <section id="contact" className="mx-auto max-w-4xl px-6 py-24 sm:px-12">
+  <section
+    id="contact"
+    className="mx-auto w-full max-w-[var(--portfolio-content-width)] [padding:var(--portfolio-section-space)_var(--portfolio-page-padding)]"
+  >
     <motion.div {...reveal()}>
       <p className="mb-4 font-mono text-xs tracking-[0.2em] text-brand-primary uppercase">
         Contact
       </p>
-      <h2 className="max-w-xl text-3xl font-bold tracking-tight text-fg-primary sm:text-4xl">
+      <h2 className="max-w-[42.5rem] [font-family:var(--portfolio-font-display)] text-[clamp(1.75rem,4.2vw,3.25rem)] leading-tight font-semibold tracking-tight text-fg-primary">
         Discutons de votre prochain projet
       </h2>
       <p className="mt-4 max-w-xl text-fg-secondary">
@@ -47,14 +50,14 @@ const Contact = () => (
       </p>
     </motion.div>
 
-    <motion.div {...reveal(0.1)} className="mt-10 flex flex-wrap gap-4">
+    <motion.div {...reveal(0.1)} className="mt-16 flex flex-wrap gap-6">
       {contactLinks.map(({ label, value, href, icon: Icon }) => (
         <a
           key={label}
           href={href}
           target={href.startsWith('http') ? '_blank' : undefined}
           rel={href.startsWith('http') ? 'noopener noreferrer' : undefined}
-          className="flex items-center gap-3 rounded-lg border border-line px-4 py-3 transition-colors hover:border-brand-primary/40 hover:bg-line-subtle"
+          className="flex min-w-[12.5rem] items-center gap-3 rounded-[var(--radius-md)] border border-line px-6 py-5 transition-all hover:-translate-y-0.5 hover:border-brand-primary"
         >
           <Icon className="size-5 text-brand-primary" />
           <div>
@@ -75,7 +78,7 @@ const Contact = () => (
       </LinkButton>
     </motion.div>
 
-    <div className="mt-20 flex flex-wrap items-center justify-between gap-3 border-t border-line-subtle pt-6 text-sm text-fg-tertiary">
+    <div className="mt-16 flex flex-wrap items-center justify-between gap-3 border-t border-line-subtle pt-8 font-mono text-xs text-fg-tertiary">
       <p>© {new Date().getFullYear()} Pierre-Alexandre Monneau</p>
       <a href="#top" className="transition-colors hover:text-fg-primary">
         Haut de page
