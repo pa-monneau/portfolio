@@ -165,14 +165,14 @@ const Parcours = () => (
             className="absolute top-1.5 -left-[2.28rem] size-2.5 rounded-full bg-brand-primary sm:-left-[2.78rem]"
           />
           <div className="max-w-[40rem] xl:max-w-[60rem]">
-            <div className="flex flex-wrap items-baseline gap-x-4 gap-y-1">
+            <div className="flex flex-col gap-1">
               <span className="font-mono text-[13px] text-fg-tertiary">
                 {exp.period}
               </span>
               <h3 className="[font-family:var(--portfolio-font-display)] text-xl font-semibold text-fg-primary">
-                {exp.role}
+                {exp.role}{' '}
+                <span className="text-fg-secondary">— {exp.company}</span>
               </h3>
-              <span className="text-sm text-fg-secondary">— {exp.company}</span>
             </div>
             <p className="mt-2 text-[15.5px] leading-relaxed text-fg-secondary">
               {exp.context}
