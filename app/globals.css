@@ -1,0 +1,23 @@
+@import "tailwindcss";
+@import "@recordair/theme-recordair";
+
+/*
+ * Identité propre au portfolio : dominante bleu, sobre (pas de dégradé rose/violet
+ * hérité de Record'air). On ne touche qu'aux valeurs des tokens sémantiques du DS,
+ * jamais aux noms (cf. section "Personnaliser le thème" du README designair).
+ */
+:root {
+  --recordair-color-brand-primary: #2563eb;
+  --recordair-color-brand-secondary: #1d4ed8;
+  --recordair-color-brand-gradient-from: #2563eb;
+  --recordair-color-brand-gradient-to: #1e3a8a;
+  --recordair-color-selected-fg: #2563eb;
+}
+
+[data-theme="dark"] {
+  --recordair-color-brand-primary: #3b82f6;
+  --recordair-color-brand-secondary: #60a5fa;
+  --recordair-color-brand-gradient-from: #3b82f6;
+  --recordair-color-brand-gradient-to: #1e3a8a;
+  --recordair-color-selected-fg: #60a5fa;
+}
