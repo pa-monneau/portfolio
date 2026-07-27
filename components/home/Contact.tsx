@@ -62,7 +62,7 @@ const Contact = () => (
           href={href}
           target={href.startsWith('http') ? '_blank' : undefined}
           rel={href.startsWith('http') ? 'noopener noreferrer' : undefined}
-          className="flex min-w-[12.5rem] items-center gap-3 rounded-[var(--radius-md)] border border-line px-6 py-5 transition-all hover:-translate-y-0.5 hover:border-brand-primary"
+          className="flex w-full min-w-[12.5rem] items-center gap-3 rounded-[var(--radius-md)] border border-line px-6 py-5 transition-all hover:-translate-y-0.5 hover:border-brand-primary sm:w-auto"
         >
           <Icon className="size-5 text-brand-primary" />
           <div>
