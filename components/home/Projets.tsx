@@ -27,7 +27,7 @@ type Project = {
   stack: string[];
   stackPending?: string[];
   image: string;
-  href?: string;
+  href: string;
   note: string;
 };
 
@@ -126,7 +126,13 @@ const Projets = () => (
             {...reveal(0.1 + i * 0.08)}
             className="grid grid-cols-1 items-center gap-8 border-t border-line-subtle py-16 lg:grid-cols-[5fr_7fr] lg:gap-16"
           >
-            <div className="relative aspect-4/3 overflow-hidden rounded-[var(--radius-lg)] border border-line-subtle bg-surface-page transition-transform duration-500 hover:-translate-y-1">
+            <a
+              href={project.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`Ouvrir ${project.name}`}
+              className="relative aspect-4/3 overflow-hidden rounded-[var(--radius-lg)] border border-line-subtle bg-surface-page transition-transform duration-500 hover:-translate-y-1 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-primary"
+            >
               <Image
                 src={project.image}
                 alt={`Aperçu de ${project.name}`}
@@ -134,7 +140,7 @@ const Projets = () => (
                 sizes="(min-width: 1024px) 42vw, 100vw"
                 className="object-cover object-top"
               />
-            </div>
+            </a>
 
             <div>
               <div className="mb-3 flex items-baseline gap-4">
@@ -188,20 +194,14 @@ const Projets = () => (
                 ))}
               </div>
 
-              {project.href ? (
-                <a
-                  href={project.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 border-b border-dashed border-line pb-0.5 text-sm font-semibold text-fg-primary transition-colors hover:border-brand-primary hover:text-brand-primary"
-                >
-                  Voir le projet <ArrowRightIcon className="size-3.5" />
-                </a>
-              ) : (
-                <span className="inline-flex items-center gap-2 border-b border-dashed border-line pb-0.5 text-sm font-semibold text-fg-primary">
-                  Voir le projet <ArrowRightIcon className="size-3.5" />
-                </span>
-              )}
+              <a
+                href={project.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 border-b border-dashed border-line pb-0.5 text-sm font-semibold text-fg-primary transition-colors hover:border-brand-primary hover:text-brand-primary"
+              >
+                Voir le projet <ArrowRightIcon className="size-3.5" />
+              </a>
             </div>
           </motion.article>
         ))}
