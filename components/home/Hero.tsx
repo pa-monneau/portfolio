@@ -57,10 +57,13 @@ const Hero = () => {
     prefersReducedMotion ? 0 : y * 0.36 * PARALLAX_INTENSITY,
   );
   const accentY = useTransform(scrollY, (y) =>
-    prefersReducedMotion ? 0 : y * 0.8 * PARALLAX_INTENSITY,
+    prefersReducedMotion
+      ? 0
+      : y * 0.68 * PARALLAX_INTENSITY +
+        (1 - Math.cos(y * 0.014)) * 40 * PARALLAX_INTENSITY,
   );
   const accentX = useTransform(scrollY, (y) =>
-    prefersReducedMotion ? 0 : y * 0.9 * PARALLAX_INTENSITY,
+    prefersReducedMotion ? 0 : Math.sin(y * 0.014) * 90 * PARALLAX_INTENSITY,
   );
 
   return (
@@ -100,7 +103,7 @@ const Hero = () => {
       <motion.div
         aria-hidden
         style={{ x: accentX, y: accentY }}
-        className="pointer-events-none absolute top-[65%] left-[72%] block size-[clamp(1.5rem,2.5vw,2.5rem)] rotate-45 border-2 border-brand-primary/70 bg-brand-primary/10 sm:top-24 sm:left-[clamp(10rem,18vw,24rem)]"
+        className="pointer-events-none absolute top-24 left-[72%] block size-[clamp(1.5rem,2.5vw,2.5rem)] rotate-45 border-2 border-brand-primary/70 bg-brand-primary/10 sm:left-[clamp(10rem,18vw,24rem)]"
       />
 
       <motion.div
