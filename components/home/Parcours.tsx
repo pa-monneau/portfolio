@@ -158,14 +158,14 @@ const Parcours = () => (
         <motion.div
           key={exp.company}
           {...reveal(i < 4 ? i * 0.08 : 0)}
-          className="relative flex flex-col items-center gap-2 pb-12 text-center last:pb-0"
+          className="relative flex flex-col items-start gap-2 pb-12 text-left last:pb-0"
         >
           <span
             aria-hidden
             className="absolute top-1.5 -left-[2.28rem] size-2.5 rounded-full bg-brand-primary sm:-left-[2.78rem]"
           />
           <div className="max-w-[40rem] xl:max-w-[60rem]">
-            <div className="flex flex-wrap items-baseline justify-center gap-x-4 gap-y-1">
+            <div className="flex flex-wrap items-baseline gap-x-4 gap-y-1">
               <span className="font-mono text-[13px] text-fg-tertiary">
                 {exp.period}
               </span>
@@ -177,7 +177,7 @@ const Parcours = () => (
             <p className="mt-2 text-[15.5px] leading-relaxed text-fg-secondary">
               {exp.context}
             </p>
-            <div className="mt-2 flex flex-wrap justify-center gap-1.5">
+            <div className="mt-2 flex flex-wrap gap-1.5">
               {exp.stack.map((tech) => (
                 <Badge
                   key={tech}
