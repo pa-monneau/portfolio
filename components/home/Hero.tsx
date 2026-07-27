@@ -5,6 +5,7 @@ import {
   motion,
   useReducedMotion,
   useScroll,
+  useSpring,
   useTransform,
 } from 'motion/react';
 import { getTechBadgeClassName, sortTechnologies } from '@/lib/techBadge';
@@ -56,15 +57,17 @@ const Hero = () => {
   const squareX = useTransform(scrollY, (y) =>
     prefersReducedMotion ? 0 : y * 0.36 * PARALLAX_INTENSITY,
   );
-  const accentY = useTransform(scrollY, (y) =>
+  const accentYTarget = useTransform(scrollY, (y) =>
     prefersReducedMotion
       ? 0
       : y * 0.68 * PARALLAX_INTENSITY +
         (1 - Math.cos(y * 0.014)) * 40 * PARALLAX_INTENSITY,
   );
-  const accentX = useTransform(scrollY, (y) =>
+  const accentXTarget = useTransform(scrollY, (y) =>
     prefersReducedMotion ? 0 : Math.sin(y * 0.014) * 90 * PARALLAX_INTENSITY,
   );
+  const accentY = useSpring(accentYTarget, { stiffness: 90, damping: 24 });
+  const accentX = useSpring(accentXTarget, { stiffness: 90, damping: 24 });
 
   return (
     <section className="relative flex min-h-screen flex-col justify-center overflow-hidden [padding:calc(6rem+4rem)_var(--portfolio-page-padding)_6rem]">
