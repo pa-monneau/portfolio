@@ -47,7 +47,8 @@ const Contact = () => (
         Discutons de votre prochain projet
       </h2>
       <p className="mx-auto mt-4 max-w-xl xl:max-w-[50rem] text-fg-secondary">
-        Disponible pour des missions freelance et des postes de lead technique.
+        Disponible pour des missions de développement full stack et des
+        fonctions de lead technique.
       </p>
     </motion.div>
 

@@ -38,12 +38,12 @@ const projects: Project[] = [
     name: "Design'air",
     status: 'live',
     statusLabel: 'Publié',
-    statusSub: 'lib UI partagée',
+    statusSub: 'design system partagé',
     pitch:
-      "Design system React partagé entre Record'air, Home'air et Bi'air, conçu pour accélérer chaque produit sans diluer leur identité.",
+      "Design system React partagé entre Record'air, Home'air et Bi'air, conçu pour accélérer le développement tout en préservant l’identité de chaque produit.",
     facts: [
-      '3 packages npm publiés et versionnés',
-      'Storybook déployé avec documentation générée depuis les stories',
+      'Trois packages npm publiés et versionnés',
+      'Documentation Storybook déployée depuis les stories',
     ],
     stack: ['React', 'TypeScript', 'Vite', 'Storybook', 'Tailwind CSS', 'npm'],
     image: '/images/projects/designair.png',
@@ -55,12 +55,12 @@ const projects: Project[] = [
     name: "Record'air",
     status: 'live',
     statusLabel: 'En production',
-    statusSub: "encaisse réellement de l'argent",
+    statusSub: 'paiements sécurisés en production',
     pitch:
-      'Marketplace de réservation de studios de musique, façon Airbnb — trois profils utilisateurs : artiste, studio, professionnel. Paiement Stripe en deux temps (autorisation puis capture).',
+      'Marketplace de réservation de studios de musique réunissant artistes, studios et professionnels. Parcours de paiement Stripe fondé sur l’autorisation puis la capture.',
     facts: [
-      '3 profils : artiste, studio, professionnel',
-      'Paiement Stripe — autorisation → capture',
+      'Trois espaces dédiés : artiste, studio et professionnel',
+      'Paiement Stripe avec autorisation puis capture',
     ],
     stack: [
       'Next.js 16',
@@ -81,12 +81,12 @@ const projects: Project[] = [
     name: "Home'air",
     status: 'progress',
     statusLabel: 'En finition',
-    statusSub: 'avant une prod stabilisée',
+    statusSub: 'vers une mise en production stabilisée',
     pitch:
-      "Marketplace française de services à domicile (jardinage, babysitting, ménage…), avec un compte unique permettant d'être client ou prestataire.",
+      'Marketplace française de services à domicile, du jardinage à la garde d’enfants, avec un compte unifié pour les clients et les prestataires.',
     facts: [
-      'Compte unique client / prestataire',
-      "Paiement verrouillé à l'acceptation du devis + réputation",
+      'Compte unifié client et prestataire',
+      'Paiement déclenché à l’acceptation du devis et système de réputation',
     ],
     stack: [
       'Next.js',
@@ -108,10 +108,10 @@ const projects: Project[] = [
     statusLabel: 'En ligne',
     statusSub: 'depuis le 27 juillet 2026',
     pitch:
-      'Catalogue de jeux connus à deux, jouables en pass-and-play sur le même appareil ou à distance en temps réel.',
+      'Sélection de jeux à deux, jouables sur le même appareil ou à distance en temps réel.',
     facts: [
-      '4 jeux : pioche de cartes, pendu, dés, mime',
-      'Local (pass-and-play) & distant temps réel (Supabase Realtime)',
+      'Quatre jeux : cartes, pendu, dés et mime',
+      'Modes local et distant en temps réel via Supabase Realtime',
     ],
     stack: ['Supabase', 'Realtime'],
     image: '/images/projects/biair.png',
@@ -131,7 +131,7 @@ const Projets = () => (
           Projets persos
         </p>
         <h2 className="mx-auto max-w-[45rem] [font-family:var(--portfolio-font-display)] text-[clamp(1.75rem,3.6vw,2.75rem)] leading-tight font-semibold tracking-tight text-fg-primary">
-          Des side projects qui tournent en prod
+          Des produits conçus et mis en production
         </h2>
       </motion.div>
 

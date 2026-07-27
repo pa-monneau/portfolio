@@ -77,7 +77,7 @@ const Hero = () => {
           variants={item}
           className="mb-6 font-mono text-[13px] tracking-[0.08em] text-brand-primary uppercase"
         >
-          Développeur freelance — Lead technique
+          Développeur freelance & lead technique
         </motion.p>
 
         <motion.h1
@@ -93,8 +93,9 @@ const Hero = () => {
           variants={item}
           className="mt-8 max-w-[40rem] text-[clamp(1.125rem,2vw,1.5rem)] leading-relaxed text-fg-secondary"
         >
-          Lead développeur freelance JS/TS, je conçois et je construis des
-          produits du code au business.
+          Développeur full stack JavaScript/TypeScript, j’accompagne la
+          conception, la réalisation et la mise en production de produits
+          numériques.
         </motion.p>
 
         <motion.div variants={item} className="mt-12 flex flex-wrap gap-3">
