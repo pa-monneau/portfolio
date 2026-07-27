@@ -7,6 +7,7 @@ import {
   WrenchIcon,
 } from '@recordair/ui-core/icons';
 import { motion } from 'motion/react';
+import Image from 'next/image';
 
 const reveal = (delay = 0) => ({
   initial: { opacity: 0, y: 24 },
@@ -25,6 +26,7 @@ type Project = {
   facts: string[];
   stack: string[];
   stackPending?: string[];
+  image: string;
   href?: string;
   note: string;
 };
@@ -43,6 +45,7 @@ const projects: Project[] = [
       'Storybook déployé avec documentation générée depuis les stories',
     ],
     stack: ['React', 'TypeScript', 'Storybook', 'npm'],
+    image: '/images/projects/designair.png',
     href: 'https://pa-monneau.github.io/designair/?path=/docs/introduction-overview--docs',
     note: 'Socle UI commun des projets de l’écosystème Air.',
   },
@@ -59,6 +62,7 @@ const projects: Project[] = [
       'Paiement Stripe — autorisation → capture',
     ],
     stack: ['Next.js 16', 'Supabase self-hosted', 'GCP'],
+    image: '/images/projects/recordair.png',
     href: 'https://recordair.com',
     note: "Projet le plus abouti — de l'idée au produit qui tourne en prod.",
   },
@@ -76,6 +80,7 @@ const projects: Project[] = [
     ],
     stack: ['Cloud Run'],
     stackPending: ['Stack à préciser'],
+    image: '/images/projects/homeair.png',
     href: 'https://homeair-577545104657.europe-west9.run.app/',
     note: 'En ligne, en finition avant une prod stabilisée.',
   },
@@ -93,6 +98,7 @@ const projects: Project[] = [
     ],
     stack: ['Supabase Realtime'],
     stackPending: ['Stack à préciser'],
+    image: '/images/projects/biair.png',
     href: 'https://biair-538206392035.europe-west9.run.app/',
     note: 'Architecture pensée dès le départ pour les modes local et distant.',
   },
@@ -120,8 +126,14 @@ const Projets = () => (
             {...reveal(0.1 + i * 0.08)}
             className="grid grid-cols-1 items-center gap-8 border-t border-line-subtle py-16 lg:grid-cols-[5fr_7fr] lg:gap-16"
           >
-            <div className="aspect-4/3 overflow-hidden rounded-[var(--radius-lg)] border border-line-subtle bg-surface-page transition-transform duration-500 hover:-translate-y-1">
-              <div aria-hidden className="size-full" />
+            <div className="relative aspect-4/3 overflow-hidden rounded-[var(--radius-lg)] border border-line-subtle bg-surface-page transition-transform duration-500 hover:-translate-y-1">
+              <Image
+                src={project.image}
+                alt={`Aperçu de ${project.name}`}
+                fill
+                sizes="(min-width: 1024px) 42vw, 100vw"
+                className="object-cover object-top"
+              />
             </div>
 
             <div>
