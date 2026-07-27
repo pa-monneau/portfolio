@@ -42,10 +42,10 @@ const Contact = () => (
       <p className="mb-4 font-mono text-xs tracking-[0.2em] text-brand-primary uppercase">
         Contact
       </p>
-      <h2 className="mx-auto max-w-[42.5rem] [font-family:var(--portfolio-font-display)] text-[clamp(1.75rem,4.2vw,3.25rem)] leading-tight font-semibold tracking-tight text-fg-primary">
+      <h2 className="mx-auto max-w-[42.5rem] xl:max-w-[60rem] [font-family:var(--portfolio-font-display)] text-[clamp(1.75rem,4.2vw,3.25rem)] leading-tight font-semibold tracking-tight text-fg-primary">
         Discutons de votre prochain projet
       </h2>
-      <p className="mx-auto mt-4 max-w-xl text-fg-secondary">
+      <p className="mx-auto mt-4 max-w-xl xl:max-w-[50rem] text-fg-secondary">
         Disponible pour des missions freelance et des postes de lead technique.
       </p>
     </motion.div>
