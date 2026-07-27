@@ -190,9 +190,6 @@ const Parcours = () => (
         7 ans d&apos;expérience full stack et tech lead, développeur web et
         mobile freelance basé à Lille.
       </p>
-      <Badge tone="brand" size="md" icon={<UserIcon className="size-3.5" />}>
-        Team lead — jusqu&apos;à 12 personnes
-      </Badge>
     </motion.div>
 
     <div className="relative mx-auto flex w-fit flex-col border-l border-line-subtle pl-8 sm:pl-10">
