@@ -36,7 +36,7 @@ const contactLinks = [
 const Contact = () => (
   <section
     id="contact"
-    className="mx-auto w-full max-w-[var(--portfolio-content-width)] [padding:var(--portfolio-section-space)_var(--portfolio-page-padding)]"
+    className="w-full [padding:var(--portfolio-section-space)_var(--portfolio-page-padding)]"
   >
     <motion.div {...reveal()}>
       <p className="mb-4 font-mono text-xs tracking-[0.2em] text-brand-primary uppercase">

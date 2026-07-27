@@ -109,7 +109,7 @@ const Projets = () => (
     id="projets"
     className="w-full bg-surface-elevated [padding:6rem_var(--portfolio-page-padding)_var(--portfolio-section-space)]"
   >
-    <div className="mx-auto max-w-[var(--portfolio-content-width)]">
+    <div className="w-full">
       <motion.div {...reveal()} className="mb-24">
         <p className="mb-4 font-mono text-xs tracking-[0.2em] text-brand-primary uppercase">
           Projets persos
