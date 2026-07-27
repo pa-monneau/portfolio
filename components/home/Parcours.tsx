@@ -144,7 +144,7 @@ const Parcours = () => (
       {...reveal(0.1)}
       className="mt-8 mb-24 flex flex-wrap items-center justify-center gap-6 text-center"
     >
-      <p className="max-w-[37.5rem] text-[clamp(1rem,1.6vw,1.1875rem)] leading-relaxed text-fg-secondary">
+      <p className="max-w-[37.5rem] xl:max-w-[50rem] text-[clamp(1rem,1.6vw,1.1875rem)] leading-relaxed text-fg-secondary">
         7 ans d&apos;expérience full stack et tech lead, développeur web et
         mobile freelance basé à Lille.
       </p>
@@ -164,7 +164,7 @@ const Parcours = () => (
             aria-hidden
             className="absolute top-1.5 -left-[2.28rem] size-2.5 rounded-full bg-brand-primary sm:-left-[2.78rem]"
           />
-          <div className="max-w-[40rem]">
+          <div className="max-w-[40rem] xl:max-w-[60rem]">
             <div className="flex flex-wrap items-baseline justify-center gap-x-4 gap-y-1">
               <span className="font-mono text-[13px] text-fg-tertiary">
                 {exp.period}
