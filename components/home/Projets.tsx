@@ -25,6 +25,7 @@ type Project = {
   facts: string[];
   stack: string[];
   stackPending?: string[];
+  href?: string;
   note: string;
 };
 
@@ -42,6 +43,7 @@ const projects: Project[] = [
       'Storybook déployé avec documentation générée depuis les stories',
     ],
     stack: ['React', 'TypeScript', 'Storybook', 'npm'],
+    href: 'https://pa-monneau.github.io/designair/?path=/docs/introduction-overview--docs',
     note: 'Socle UI commun des projets de l’écosystème Air.',
   },
   {
@@ -171,9 +173,20 @@ const Projets = () => (
                 ))}
               </div>
 
-              <span className="inline-flex items-center gap-2 border-b border-dashed border-line pb-0.5 text-sm font-semibold text-fg-primary">
-                Voir le projet <ArrowRightIcon className="size-3.5" />
-              </span>
+              {project.href ? (
+                <a
+                  href={project.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 border-b border-dashed border-line pb-0.5 text-sm font-semibold text-fg-primary transition-colors hover:border-brand-primary hover:text-brand-primary"
+                >
+                  Voir le projet <ArrowRightIcon className="size-3.5" />
+                </a>
+              ) : (
+                <span className="inline-flex items-center gap-2 border-b border-dashed border-line pb-0.5 text-sm font-semibold text-fg-primary">
+                  Voir le projet <ArrowRightIcon className="size-3.5" />
+                </span>
+              )}
             </div>
           </motion.article>
         ))}
