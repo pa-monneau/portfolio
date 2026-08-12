@@ -1,18 +1,6 @@
-import { Contact } from '@/components/home/Contact';
-import { Hero } from '@/components/home/Hero';
-import { Parcours } from '@/components/home/Parcours';
-import { Projets } from '@/components/home/Projets';
-import { SiteHeader } from '@/components/layout/SiteHeader';
+import { redirect } from 'next/navigation';
+import { routing } from '@/i18n/routing';
 
-export default function Home() {
-  return (
-    <>
-      <SiteHeader />
-      <div id="top" />
-      <Hero />
-      <Projets />
-      <Parcours />
-      <Contact />
-    </>
-  );
-}
+const RootPage = () => redirect(`/${routing.defaultLocale}`);
+
+export default RootPage;

@@ -1,0 +1,165 @@
+{
+  "Metadata": {
+    "title": "Pierre-Alexandre Monneau — Portfolio",
+    "description": "Développeur freelance JS/TS — parcours et projets."
+  },
+  "Nav": {
+    "parcours": "Parcours",
+    "projets": "Projets",
+    "contact": "Contact",
+    "switchLanguage": "Changer de langue",
+    "langName": {
+      "fr": "Français",
+      "en": "Anglais"
+    }
+  },
+  "Hero": {
+    "eyebrow": "Développeur freelance & lead technique",
+    "pitch": "Développeur full stack JavaScript/TypeScript, j’accompagne la conception, la réalisation et la mise en production de produits numériques.",
+    "ctaProjects": "Voir les projets",
+    "ctaContact": "Me contacter",
+    "scroll": "Défiler"
+  },
+  "Parcours": {
+    "eyebrow": "Parcours",
+    "title": "De la mission au produit qui tourne",
+    "intro": "7 ans d'expérience full stack et tech lead, développeur web et mobile freelance basé à Lille.",
+    "experiences": {
+      "recordair": {
+        "role": "Développeur Full Stack — Founder",
+        "company": "Record'air (projet personnel)",
+        "period": "Avril 2026 – Aujourd'hui",
+        "context": "Marketplace de réservation de studios à trois acteurs, conçue et développée de bout en bout en autonomie : parcours de réservation, back-office studio, messagerie temps réel et infrastructure GCP. Paiement Stripe intégré jusqu’à la capture, aux webhooks et aux commissions marketplace."
+      },
+      "homeair": {
+        "role": "Développeur Full Stack — Founder",
+        "company": "Home'air (projet personnel)",
+        "period": "Juin 2026 – Aujourd'hui",
+        "context": "Marketplace de services à domicile pensée autour de deux parcours, client et prestataire, avec un compte à double rôle et des réservations directes ou par candidatures. Architecture Next.js et Supabase auto-hébergé sur GCP, avec une cible API Go pour faire évoluer progressivement le back-end."
+      },
+      "ankama": {
+        "role": "Team Lead Full Stack",
+        "company": "Ankama, France",
+        "period": "Octobre 2025 – Mai 2026",
+        "context": "Team lead de 12 personnes sur Ankama Launcher : pilotage technique des sprints, migrations inter-équipes et accompagnement des développeurs. Mise en place d’une API NestJS en clean architecture et d’environnements personnels déployables à la demande via GitLab CI."
+      },
+      "absPreschool": {
+        "role": "Développeur Full Stack",
+        "company": "ABS French Preschool",
+        "period": "Fév. – Juin 2024 · Déc. 2024 – Avr. 2025",
+        "context": "Réalisation hors design d’une plateforme CMS pour une chaîne d’écoles américaines, du cadrage fonctionnel à la supervision GCP. Front Next.js, back headless Strapi et API Go d’adaptation pour normaliser puis exposer les données de plusieurs sources externes."
+      },
+      "waykonect": {
+        "role": "Développeur Full Stack",
+        "company": "Waykonect (filiale TotalEnergies)",
+        "period": "Mai 2024 – Novembre 2024",
+        "context": "Refonte de la solution au sein d’une équipe de 6, avec réalisation du back-office Next.js en autonomie et évolution du produit React. Reprise d’un projet sans documentation, réintégration à l’infrastructure AWS et création d’environnements de test déployables via pipeline."
+      },
+      "illicado": {
+        "role": "Développeur Back-end / Front-end",
+        "company": "Illicado",
+        "period": "Juillet 2023 – Octobre 2023",
+        "context": "Conception de l’API Wallet NestJS couvrant le cycle de vie d’une carte cadeau dans une architecture microservices. Développement d’API CRUD hexagonales, refonte du back-office en Vue 3 / Nuxt et mise en place de la CI/CD GitLab."
+      },
+      "lyreco": {
+        "role": "Référent Front",
+        "company": "Lyreco",
+        "period": "Décembre 2022 – Juin 2023",
+        "context": "Référent front d’une équipe Scrum de 10 personnes sur le site e-commerce B2B : migration TypeScript, refactorisation du legacy et optimisation des performances. Mise en place de Jest, du linter et de Prettier, puis formation de trois développeurs aux bonnes pratiques TS/JS."
+      },
+      "ecommerceClient": {
+        "role": "Développeur Full Stack",
+        "company": "Client e-commerce",
+        "period": "Juin 2022 – Août 2022",
+        "context": "Développement en autonomie de sites e-commerce avec Next.js en SSR/BFF et une architecture hexagonale documentée. Intégration de NextAuth, microservices et chaîne CI/CD GitLab avec provisioning Ansible."
+      },
+      "adeo": {
+        "role": "Développeur NestJS",
+        "company": "ADEO (Leroy Merlin, Brico Dépôt)",
+        "period": "Novembre 2021 – Avril 2022",
+        "context": "Réalisation du POC ERPC au sein d’une équipe de 4 : refonte de services back-end en architecture hexagonale et développement de fonctionnalités NestJS. Mise en place de KafkaJS pour les échanges inter-microservices, avec documentation et tests automatisés."
+      },
+      "sncf": {
+        "role": "Développeur React",
+        "company": "SNCF e-voyageur",
+        "period": "Mars 2021 – Septembre 2021",
+        "context": "Intégration et maintenance du front React de la plateforme digitale voyageurs SNCF. Développement de fonctionnalités avec Redux, intégration de templates Drupal et rédaction de la documentation de refactorisation."
+      },
+      "phi": {
+        "role": "Développeur Web & Mobile",
+        "company": "Phi Développement",
+        "period": "Novembre 2019 – Mars 2021",
+        "context": "Réalisation en autonomie de projets web et mobile pour une agence : microservices Express, dashboards d’administration et authentification Passport.js. Développement d’une application React Native avec géolocalisation, génération de PDF et paiement Stripe."
+      },
+      "clicar": {
+        "role": "Développeur React",
+        "company": "Clicar",
+        "period": "Janvier 2018 – Novembre 2019",
+        "context": "Développement du site clicar.com au sein d’une équipe de deux développeurs et un designer : front React et API Express.js. Réalisation de l’authentification, du dashboard d’administration et du déploiement Docker, avec contribution à la formation et aux contenus de cours."
+      },
+      "infoLogiSante": {
+        "role": "Développeur Back-end",
+        "company": "Info Logi Santé (Qualineo)",
+        "period": "Novembre 2017 – Janvier 2018",
+        "context": "Refonte et intégration du front d’une application métier pour le secteur de la santé. Correction de bugs, intégration UI et refactorisation progressive de code legacy en ASP.NET."
+      }
+    }
+  },
+  "Projets": {
+    "eyebrow": "Projets persos",
+    "title": "Des produits conçus et mis en production",
+    "openLabel": "Ouvrir {name}",
+    "previewAlt": "Aperçu de {name}",
+    "viewProject": "Voir le projet",
+    "items": {
+      "designair": {
+        "statusLabel": "Publié",
+        "statusSub": "design system partagé",
+        "pitch": "Design system React partagé entre Record'air, Home'air et Bi'air, conçu pour accélérer le développement tout en préservant l’identité de chaque produit.",
+        "facts": [
+          "Trois packages npm publiés et versionnés",
+          "Documentation Storybook déployée depuis les stories"
+        ],
+        "note": "Socle UI commun des projets de l’écosystème Air."
+      },
+      "recordair": {
+        "statusLabel": "En production",
+        "statusSub": "paiements sécurisés en production",
+        "pitch": "Marketplace de réservation de studios de musique réunissant artistes, studios et professionnels. Parcours de paiement Stripe fondé sur l’autorisation puis la capture.",
+        "facts": [
+          "Trois espaces dédiés : artiste, studio et professionnel",
+          "Paiement Stripe avec autorisation puis capture"
+        ],
+        "note": "Projet le plus abouti — de l'idée au produit qui tourne en prod."
+      },
+      "homeair": {
+        "statusLabel": "En finition",
+        "statusSub": "vers une mise en production stabilisée",
+        "pitch": "Marketplace française de services à domicile, du jardinage à la garde d’enfants, avec un compte unifié pour les clients et les prestataires.",
+        "facts": [
+          "Compte unifié client et prestataire",
+          "Paiement déclenché à l’acceptation du devis et système de réputation"
+        ],
+        "note": "En ligne, en finition avant une prod stabilisée."
+      },
+      "biair": {
+        "statusLabel": "En ligne",
+        "statusSub": "depuis le 27 juillet 2026",
+        "pitch": "Sélection de jeux à deux, jouables sur le même appareil ou à distance en temps réel.",
+        "facts": [
+          "Quatre jeux : cartes, pendu, dés et mime",
+          "Modes local et distant en temps réel via Supabase Realtime"
+        ],
+        "note": "Architecture pensée dès le départ pour les modes local et distant."
+      }
+    }
+  },
+  "Contact": {
+    "eyebrow": "Contact",
+    "title": "Discutons de votre prochain projet",
+    "subtitle": "Disponible pour des missions de développement full stack et des fonctions de lead technique.",
+    "downloadCv": "Télécharger le CV",
+    "backToTop": "Haut de page",
+    "copyright": "© {year} Pierre-Alexandre Monneau"
+  }
+}

@@ -1,0 +1,165 @@
+{
+  "Metadata": {
+    "title": "Pierre-Alexandre Monneau — Portfolio",
+    "description": "Freelance JS/TS developer — background and projects."
+  },
+  "Nav": {
+    "parcours": "Background",
+    "projets": "Projects",
+    "contact": "Contact",
+    "switchLanguage": "Switch language",
+    "langName": {
+      "fr": "French",
+      "en": "English"
+    }
+  },
+  "Hero": {
+    "eyebrow": "Freelance developer & tech lead",
+    "pitch": "Full-stack JavaScript/TypeScript developer, I support the design, development and production launch of digital products.",
+    "ctaProjects": "View projects",
+    "ctaContact": "Get in touch",
+    "scroll": "Scroll"
+  },
+  "Parcours": {
+    "eyebrow": "Background",
+    "title": "From client missions to shipped products",
+    "intro": "7 years of full-stack and tech lead experience, freelance web and mobile developer based in Lille, France.",
+    "experiences": {
+      "recordair": {
+        "role": "Full-Stack Developer — Founder",
+        "company": "Record'air (personal project)",
+        "period": "April 2026 – Present",
+        "context": "Three-sided studio booking marketplace, designed and built end-to-end independently: booking flow, studio back-office, real-time messaging and GCP infrastructure. Stripe payments integrated through to capture, webhooks and marketplace commissions."
+      },
+      "homeair": {
+        "role": "Full-Stack Developer — Founder",
+        "company": "Home'air (personal project)",
+        "period": "June 2026 – Present",
+        "context": "Home services marketplace built around two journeys, client and provider, with a dual-role account and either direct bookings or applications. Next.js architecture with self-hosted Supabase on GCP, targeting a Go API to progressively evolve the back-end."
+      },
+      "ankama": {
+        "role": "Full-Stack Team Lead",
+        "company": "Ankama, France",
+        "period": "October 2025 – May 2026",
+        "context": "Tech lead for a 12-person team on Ankama Launcher: technical steering of sprints, cross-team migrations and developer mentoring. Set up a NestJS API in clean architecture and on-demand personal environments deployable via GitLab CI."
+      },
+      "absPreschool": {
+        "role": "Full-Stack Developer",
+        "company": "ABS French Preschool",
+        "period": "Feb – Jun 2024 · Dec 2024 – Apr 2025",
+        "context": "Built a CMS platform for a US preschool chain (design excluded), from functional scoping to GCP oversight. Next.js front-end, headless Strapi back-end and a Go adapter API to normalize and expose data from several external sources."
+      },
+      "waykonect": {
+        "role": "Full-Stack Developer",
+        "company": "Waykonect (TotalEnergies subsidiary)",
+        "period": "May 2024 – November 2024",
+        "context": "Platform overhaul within a 6-person team, independently building the Next.js back-office and evolving the React product. Took over an undocumented project, re-integrated it into the AWS infrastructure and created pipeline-deployable test environments."
+      },
+      "illicado": {
+        "role": "Back-end / Front-end Developer",
+        "company": "Illicado",
+        "period": "July 2023 – October 2023",
+        "context": "Designed the Wallet NestJS API covering the full gift card lifecycle within a microservices architecture. Built hexagonal CRUD APIs, revamped the back-office in Vue 3 / Nuxt and set up GitLab CI/CD."
+      },
+      "lyreco": {
+        "role": "Front-end Lead",
+        "company": "Lyreco",
+        "period": "December 2022 – June 2023",
+        "context": "Front-end lead for a 10-person Scrum team on the B2B e-commerce site: TypeScript migration, legacy refactoring and performance optimization. Set up Jest, linting and Prettier, then trained three developers on TS/JS best practices."
+      },
+      "ecommerceClient": {
+        "role": "Full-Stack Developer",
+        "company": "E-commerce client",
+        "period": "June 2022 – August 2022",
+        "context": "Independently built e-commerce sites with Next.js in SSR/BFF and a documented hexagonal architecture. Integrated NextAuth, microservices and a GitLab CI/CD pipeline with Ansible provisioning."
+      },
+      "adeo": {
+        "role": "NestJS Developer",
+        "company": "ADEO (Leroy Merlin, Brico Dépôt)",
+        "period": "November 2021 – April 2022",
+        "context": "Built the ERPC POC within a 4-person team: reworked back-end services in hexagonal architecture and developed NestJS features. Set up KafkaJS for inter-microservice communication, with documentation and automated tests."
+      },
+      "sncf": {
+        "role": "React Developer",
+        "company": "SNCF e-voyageur",
+        "period": "March 2021 – September 2021",
+        "context": "Integrated and maintained the React front-end of SNCF's passenger digital platform. Built features with Redux, integrated Drupal templates and wrote refactoring documentation."
+      },
+      "phi": {
+        "role": "Web & Mobile Developer",
+        "company": "Phi Développement",
+        "period": "November 2019 – March 2021",
+        "context": "Independently delivered web and mobile projects for an agency: Express microservices, admin dashboards and Passport.js authentication. Built a React Native app with geolocation, PDF generation and Stripe payments."
+      },
+      "clicar": {
+        "role": "React Developer",
+        "company": "Clicar",
+        "period": "January 2018 – November 2019",
+        "context": "Built clicar.com within a two-developer, one-designer team: React front-end and Express.js API. Delivered authentication, the admin dashboard and Docker deployment, and contributed to training and course content."
+      },
+      "infoLogiSante": {
+        "role": "Back-end Developer",
+        "company": "Info Logi Santé (Qualineo)",
+        "period": "November 2017 – January 2018",
+        "context": "Overhauled and integrated the front-end of a business application for the healthcare sector. Fixed bugs, integrated UI and progressively refactored legacy ASP.NET code."
+      }
+    }
+  },
+  "Projets": {
+    "eyebrow": "Personal projects",
+    "title": "Products designed and shipped to production",
+    "openLabel": "Open {name}",
+    "previewAlt": "Preview of {name}",
+    "viewProject": "View project",
+    "items": {
+      "designair": {
+        "statusLabel": "Published",
+        "statusSub": "shared design system",
+        "pitch": "React design system shared across Record'air, Home'air and Bi'air, built to speed up development while preserving each product's identity.",
+        "facts": [
+          "Three published, versioned npm packages",
+          "Storybook documentation deployed straight from the stories"
+        ],
+        "note": "Shared UI foundation for the Air ecosystem's projects."
+      },
+      "recordair": {
+        "statusLabel": "In production",
+        "statusSub": "secure payments live in production",
+        "pitch": "Music studio booking marketplace bringing together artists, studios and professionals. Stripe payment flow built on authorization then capture.",
+        "facts": [
+          "Three dedicated spaces: artist, studio and professional",
+          "Stripe payments with authorization then capture"
+        ],
+        "note": "The most complete project — from idea to a product running in production."
+      },
+      "homeair": {
+        "statusLabel": "In final polish",
+        "statusSub": "heading toward a stable production release",
+        "pitch": "French home services marketplace, from gardening to childcare, with a unified account for clients and providers.",
+        "facts": [
+          "Unified client and provider account",
+          "Payment triggered on quote acceptance, plus a reputation system"
+        ],
+        "note": "Live, being polished ahead of a stable production release."
+      },
+      "biair": {
+        "statusLabel": "Live",
+        "statusSub": "since July 27, 2026",
+        "pitch": "A curated selection of two-player games, playable on the same device or remotely in real time.",
+        "facts": [
+          "Four games: cards, hangman, dice and charades",
+          "Local and real-time remote modes via Supabase Realtime"
+        ],
+        "note": "Architecture designed from day one for both local and remote modes."
+      }
+    }
+  },
+  "Contact": {
+    "eyebrow": "Contact",
+    "title": "Let's talk about your next project",
+    "subtitle": "Available for full-stack development engagements and tech lead roles.",
+    "downloadCv": "Download CV",
+    "backToTop": "Back to top",
+    "copyright": "© {year} Pierre-Alexandre Monneau"
+  }
+}

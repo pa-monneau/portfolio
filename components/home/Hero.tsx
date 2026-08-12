@@ -8,6 +8,7 @@ import {
   useSpring,
   useTransform,
 } from 'motion/react';
+import { useTranslations } from 'next-intl';
 import { getTechBadgeClassName, sortTechnologies } from '@/lib/techBadge';
 
 const stack = ['Next.js', 'React', 'React Native', 'PostgreSQL'];
@@ -33,6 +34,7 @@ const item = {
 };
 
 const Hero = () => {
+  const t = useTranslations('Hero');
   const prefersReducedMotion = useReducedMotion();
   const { scrollY } = useScroll();
 
@@ -119,7 +121,7 @@ const Hero = () => {
           variants={item}
           className="mb-6 font-mono text-[13px] tracking-[0.08em] text-brand-primary uppercase"
         >
-          Développeur freelance & lead technique
+          {t('eyebrow')}
         </motion.p>
 
         <motion.h1
@@ -135,9 +137,7 @@ const Hero = () => {
           variants={item}
           className="mt-8 max-w-[40rem] text-[clamp(1.125rem,2vw,1.5rem)] leading-relaxed text-fg-secondary"
         >
-          Développeur full stack JavaScript/TypeScript, j’accompagne la
-          conception, la réalisation et la mise en production de produits
-          numériques.
+          {t('pitch')}
         </motion.p>
 
         <motion.div variants={item} className="mt-12 flex flex-wrap gap-3">
@@ -154,10 +154,10 @@ const Hero = () => {
 
         <motion.div variants={item} className="mt-16 flex flex-wrap gap-4">
           <LinkButton href="#projets" variant="primary">
-            Voir les projets
+            {t('ctaProjects')}
           </LinkButton>
           <LinkButton href="#contact" variant="secondary">
-            Me contacter
+            {t('ctaContact')}
           </LinkButton>
         </motion.div>
       </motion.div>
@@ -170,7 +170,7 @@ const Hero = () => {
       >
         <span aria-hidden className="h-8 w-px bg-line" />
         <span className="font-mono text-xs tracking-[0.2em] text-fg-tertiary uppercase">
-          Défiler
+          {t('scroll')}
         </span>
       </motion.div>
     </section>
